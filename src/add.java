@@ -1,4 +1,5 @@
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -67,14 +68,19 @@ public class add extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ADD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 18))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ADD ENTRY", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 24))); // NOI18N
 
         jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\jayed\\Documents\\NetBeansProjects\\student\\src\\project Image\\submit.png")); // NOI18N
         jButton3.setText("Submit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+            }
+        });
+        jButton3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton3KeyPressed(evt);
             }
         });
 
@@ -86,19 +92,29 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        B2.setBackground(new java.awt.Color(0, 0, 0));
         B2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B2.setForeground(new java.awt.Color(255, 255, 255));
         B2.setText("User Name");
 
+        B4.setBackground(new java.awt.Color(0, 0, 0));
         B4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B4.setForeground(new java.awt.Color(255, 255, 255));
         B4.setText("Device No");
 
+        B1.setBackground(new java.awt.Color(0, 0, 0));
         B1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B1.setForeground(new java.awt.Color(255, 255, 255));
         B1.setText("No#");
 
+        B3.setBackground(new java.awt.Color(0, 0, 0));
         B3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B3.setForeground(new java.awt.Color(255, 255, 255));
         B3.setText("Department");
 
+        B5.setBackground(new java.awt.Color(0, 0, 0));
         B5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B5.setForeground(new java.awt.Color(255, 255, 255));
         B5.setText("Brand/Item");
 
         device.addActionListener(new java.awt.event.ActionListener() {
@@ -107,10 +123,14 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        B6.setBackground(new java.awt.Color(0, 0, 0));
         B6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B6.setForeground(new java.awt.Color(255, 255, 255));
         B6.setText("Model/Conf");
 
+        B7.setBackground(new java.awt.Color(0, 0, 0));
         B7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B7.setForeground(new java.awt.Color(255, 255, 255));
         B7.setText("Qty");
 
         user.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +139,9 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        B8.setBackground(new java.awt.Color(0, 0, 0));
         B8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B8.setForeground(new java.awt.Color(255, 255, 255));
         B8.setText("Unit");
 
         no.addActionListener(new java.awt.event.ActionListener() {
@@ -128,14 +150,26 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        B10.setBackground(new java.awt.Color(0, 0, 0));
         B10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B10.setForeground(new java.awt.Color(255, 255, 255));
         B10.setText("Price");
 
+        B9.setBackground(new java.awt.Color(0, 0, 0));
         B9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B9.setForeground(new java.awt.Color(255, 255, 255));
         B9.setText("Remarks");
 
+        B11.setBackground(new java.awt.Color(0, 0, 0));
         B11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B11.setForeground(new java.awt.Color(255, 255, 255));
         B11.setText("Usage");
+
+        usage.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usageKeyPressed(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jayed\\Documents\\NetBeansProjects\\student\\src\\project Image\\cancel1.png")); // NOI18N
         jButton1.setText("Reset");
@@ -150,49 +184,58 @@ public class add extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(52, 52, 52)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(B10)
-                    .addComponent(B3)
-                    .addComponent(B2)
-                    .addComponent(B4)
-                    .addComponent(B5)
-                    .addComponent(B6)
-                    .addComponent(B7)
-                    .addComponent(B1)
-                    .addComponent(B9)
-                    .addComponent(B11)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButton3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(11, 11, 11))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(B10)
+                                    .addComponent(B9)
+                                    .addComponent(B11))
+                                .addGap(26, 26, 26)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(usage)
                             .addComponent(remark)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(B7)
+                            .addComponent(B3)
+                            .addComponent(B2)
+                            .addComponent(B4)
+                            .addComponent(B5)
+                            .addComponent(B6)
+                            .addComponent(B1))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(dept, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+                                .addComponent(device, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(brand, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(model, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(user, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(no, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
                                 .addComponent(B8)
                                 .addGap(18, 18, 18)
-                                .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(dept, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(device, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(brand, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(model, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(user, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(no, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(price))))
-                .addContainerGap(106, Short.MAX_VALUE))
+                                .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(19, 19, 19)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B1)
                     .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -220,8 +263,8 @@ public class add extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B7)
                     .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(B8)
-                    .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B9)
@@ -231,15 +274,16 @@ public class add extends javax.swing.JFrame {
                     .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(B10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(B11)
-                    .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(131, Short.MAX_VALUE))
+                    .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B11))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -277,7 +321,7 @@ public class add extends javax.swing.JFrame {
             
             
 
-            String sql = "INSERT INTO f1 (`No`, `User Name`, `Department`, `Device Number`, `Brand/Item`, `Modle/Configuration`, `Qty`, `Unit`, `Remarks`, `Price`, `Duration of usage`) VALUES ('"+NO+"','"+USER+"','"+DEPT+"','"+DEVICE+"','"+BRAND+"','"+MODEL+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+PRICE+"','"+USAGE+"')" ;
+            String sql = "INSERT INTO f1 (`No`, `User Name`, `Department`, `Device Number`, `Brand/Item`, `Model/Configuration`, `Qty`, `Unit`, `Remarks`, `Price`, `Duration of usage`) VALUES ('"+NO+"','"+USER+"','"+DEPT+"','"+DEVICE+"','"+BRAND+"','"+MODEL+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+PRICE+"','"+USAGE+"')" ;
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Data Uploaded");
 
@@ -319,6 +363,40 @@ public class add extends javax.swing.JFrame {
             price.setText("");
             usage.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton3KeyPressed
+        // TODO add your handling code here:    
+    }//GEN-LAST:event_jButton3KeyPressed
+
+    private void usageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usageKeyPressed
+        // TODO add your handling code here:
+                if (evt.getKeyCode()==KeyEvent.VK_ENTER){
+            try{
+            stmt = conn.createStatement();
+
+            int NO = Integer.parseInt(no.getText());
+            String USER = user.getText();
+            String DEPT = dept.getText();
+            String DEVICE = device.getText();
+            String BRAND = brand.getText();
+            String MODEL = model.getText();
+            int QTY = Integer.parseInt(qty.getText());
+            String UNIT = unit.getText();
+            String REMARK = remark.getText();
+            int PRICE = Integer.parseInt(price.getText());
+            String USAGE = usage.getText();
+            
+            
+
+            String sql = "INSERT INTO f1 (`No`, `User Name`, `Department`, `Device Number`, `Brand/Item`, `Model/Configuration`, `Qty`, `Unit`, `Remarks`, `Price`, `Duration of usage`) VALUES ('"+NO+"','"+USER+"','"+DEPT+"','"+DEVICE+"','"+BRAND+"','"+MODEL+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+PRICE+"','"+USAGE+"')" ;
+            stmt.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null, "Data Uploaded");
+
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        }
+    }//GEN-LAST:event_usageKeyPressed
 
     /**
      * @param args the command line arguments
