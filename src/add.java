@@ -46,7 +46,6 @@ public class add extends javax.swing.JFrame {
         B1 = new javax.swing.JLabel();
         B3 = new javax.swing.JLabel();
         B5 = new javax.swing.JLabel();
-        dept = new javax.swing.JTextField();
         device = new javax.swing.JTextField();
         brand = new javax.swing.JTextField();
         B6 = new javax.swing.JLabel();
@@ -64,6 +63,7 @@ public class add extends javax.swing.JFrame {
         B11 = new javax.swing.JLabel();
         usage = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        dept = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -144,6 +144,8 @@ public class add extends javax.swing.JFrame {
         B8.setForeground(new java.awt.Color(255, 255, 255));
         B8.setText("Unit");
 
+        unit.setText("PCs");
+
         no.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noActionPerformed(evt);
@@ -176,6 +178,13 @@ public class add extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Department", "Lean3A", "Lean1A", "Lean2A", "Lean2C", "Admin", "B1F", "BPMC", "GA", "HRSD", "ME/CI/IE", "TQS", "PAC1", "BPMC", "TTC1", " " }));
+        dept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deptActionPerformed(evt);
             }
         });
 
@@ -216,20 +225,19 @@ public class add extends javax.swing.JFrame {
                             .addComponent(B6)
                             .addComponent(B1))
                         .addGap(26, 26, 26)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(dept, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
-                                .addComponent(device, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(brand, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(model, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(user, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(no, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(device)
+                            .addComponent(brand)
+                            .addComponent(model)
+                            .addComponent(user)
+                            .addComponent(no)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
                                 .addComponent(B8)
                                 .addGap(18, 18, 18)
-                                .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -309,7 +317,7 @@ public class add extends javax.swing.JFrame {
 
             int NO = Integer.parseInt(no.getText());
             String USER = user.getText();
-            String DEPT = dept.getText();
+            String DEPT = (String) dept.getSelectedItem();
             String DEVICE = device.getText();
             String BRAND = brand.getText();
             String MODEL = model.getText();
@@ -322,6 +330,7 @@ public class add extends javax.swing.JFrame {
             
 
             String sql = "INSERT INTO f1 (`No`, `User Name`, `Department`, `Device Number`, `Brand/Item`, `Model/Configuration`, `Qty`, `Unit`, `Remarks`, `Price`, `Duration of usage`) VALUES ('"+NO+"','"+USER+"','"+DEPT+"','"+DEVICE+"','"+BRAND+"','"+MODEL+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+PRICE+"','"+USAGE+"')" ;
+            
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Data Uploaded");
 
@@ -353,7 +362,6 @@ public class add extends javax.swing.JFrame {
         // TODO add your handling code here:
             no.setText("");
             user.setText("");
-            dept.setText("");
             device.setText("");
             brand.setText("");
             model.setText("");
@@ -376,7 +384,7 @@ public class add extends javax.swing.JFrame {
 
             int NO = Integer.parseInt(no.getText());
             String USER = user.getText();
-            String DEPT = dept.getText();
+            String DEPT = (String) dept.getSelectedItem();
             String DEVICE = device.getText();
             String BRAND = brand.getText();
             String MODEL = model.getText();
@@ -397,6 +405,10 @@ public class add extends javax.swing.JFrame {
         }
         }
     }//GEN-LAST:event_usageKeyPressed
+
+    private void deptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deptActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deptActionPerformed
 
     /**
      * @param args the command line arguments
@@ -446,7 +458,7 @@ public class add extends javax.swing.JFrame {
     private javax.swing.JLabel B8;
     private javax.swing.JLabel B9;
     private javax.swing.JTextField brand;
-    private javax.swing.JTextField dept;
+    private javax.swing.JComboBox<String> dept;
     private javax.swing.JTextField device;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;

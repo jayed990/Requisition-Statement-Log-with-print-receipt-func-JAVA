@@ -96,8 +96,9 @@ public class print extends javax.swing.JFrame {
         ppanel.setBackground(new java.awt.Color(255, 255, 255));
 
         b6.setBackground(new java.awt.Color(255, 255, 255));
-        b6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        b6.setText("  SN");
+        b6.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
+        b6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        b6.setText("SN");
         b6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         x5.setEditable(false);
@@ -121,15 +122,15 @@ public class print extends javax.swing.JFrame {
         });
 
         b7.setBackground(new java.awt.Color(255, 255, 255));
-        b7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        b7.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b7.setText("Brand/Item");
+        b7.setText("Brand 品牌");
         b7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b8.setBackground(new java.awt.Color(255, 255, 255));
-        b8.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        b8.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b8.setText("Model/Configuration");
+        b8.setText("Model 型号");
         b8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         model.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -142,8 +143,9 @@ public class print extends javax.swing.JFrame {
         });
 
         b9.setBackground(new java.awt.Color(255, 255, 255));
-        b9.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        b9.setText("    Qty");
+        b9.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
+        b9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        b9.setText("Qty 数量");
         b9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         qty.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -156,13 +158,15 @@ public class print extends javax.swing.JFrame {
         });
 
         b10.setBackground(new java.awt.Color(255, 255, 255));
-        b10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        b10.setText("   Unit");
+        b10.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
+        b10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        b10.setText("Unit 单元");
         b10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         brand1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         brand1.setText(" OM:");
         brand1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        brand1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         brand1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brand1ActionPerformed(evt);
@@ -261,15 +265,16 @@ public class print extends javax.swing.JFrame {
         });
 
         b11.setBackground(new java.awt.Color(255, 255, 255));
-        b11.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        b11.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b11.setText("Remarks (reason)");
+        b11.setText("Remarks 备注");
+        b11.setToolTipText("");
         b11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b12.setBackground(new java.awt.Color(255, 255, 255));
-        b12.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        b12.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b12.setText("Price");
+        b12.setText("Price 价钱");
         b12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         price.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -291,7 +296,8 @@ public class print extends javax.swing.JFrame {
         });
 
         b13.setBackground(new java.awt.Color(255, 255, 255));
-        b13.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        b13.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
+        b13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         b13.setText(" Duration of usage");
         b13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -315,7 +321,7 @@ public class print extends javax.swing.JFrame {
 
         x3.setEditable(false);
         x3.setBackground(new java.awt.Color(255, 255, 255));
-        x3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        x3.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         x3.setText("Device No:");
         x3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -336,7 +342,7 @@ public class print extends javax.swing.JFrame {
 
         device1.setEditable(false);
         device1.setBackground(new java.awt.Color(255, 255, 255));
-        device1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        device1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         device1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         device1.setText("No#:");
         device1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -348,9 +354,9 @@ public class print extends javax.swing.JFrame {
 
         device2.setEditable(false);
         device2.setBackground(new java.awt.Color(255, 255, 255));
-        device2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        device2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         device2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        device2.setText("User Name:");
+        device2.setText("User Name用户名:");
         device2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         device2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -378,7 +384,7 @@ public class print extends javax.swing.JFrame {
 
         device5.setEditable(false);
         device5.setBackground(new java.awt.Color(255, 255, 255));
-        device5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        device5.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         device5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         device5.setText("Date:");
         device5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -390,7 +396,7 @@ public class print extends javax.swing.JFrame {
 
         x8.setEditable(false);
         x8.setBackground(new java.awt.Color(255, 255, 255));
-        x8.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        x8.setFont(new java.awt.Font("Microsoft JhengHei", 1, 16)); // NOI18N
         x8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         x8.setText("(BOFH)");
         x8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -402,9 +408,9 @@ public class print extends javax.swing.JFrame {
 
         x7.setEditable(false);
         x7.setBackground(new java.awt.Color(255, 255, 255));
-        x7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        x7.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x7.setText("Hardware Requisition Form");
+        x7.setText("Hardware Requisition Form 硬件申请表");
         x7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -423,9 +429,9 @@ public class print extends javax.swing.JFrame {
 
         x9.setEditable(false);
         x9.setBackground(new java.awt.Color(255, 255, 255));
-        x9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        x9.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         x9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x9.setText("Bangladesh Pou Hung");
+        x9.setText("Bangladesh Pou Hung(孟加拉国蒲洪)");
         x9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -435,9 +441,9 @@ public class print extends javax.swing.JFrame {
 
         x4.setEditable(false);
         x4.setBackground(new java.awt.Color(255, 255, 255));
-        x4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        x4.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x4.setText("Department:");
+        x4.setText("Department 部:");
         x4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -484,21 +490,21 @@ public class print extends javax.swing.JFrame {
                     .addComponent(unit)
                     .addComponent(b10, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(b11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(0, 0, 0)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(b12, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                                 .addGap(0, 0, 0)
-                                .addComponent(b13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(b13, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
                             .addComponent(device)))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -548,35 +554,31 @@ public class print extends javax.swing.JFrame {
                         .addComponent(dept, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(device, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(b13, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(b12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(b6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(b6)
-                        .addGap(0, 0, 0)
-                        .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(b7)
-                        .addGap(0, 0, 0)
-                        .addComponent(brand, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(model, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(b8)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(b9)
-                            .addComponent(b10))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(b11)
-                            .addComponent(b12)
-                            .addComponent(b13))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(brand, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(model, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(unit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(remark, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(price, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(usage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(brand1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -603,12 +605,12 @@ public class print extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ppanelLayout.createSequentialGroup()
                 .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
+                .addGap(46, 46, 46))
         );
         ppanelLayout.setVerticalGroup(
             ppanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ppanelLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
