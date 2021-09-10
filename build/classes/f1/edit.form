@@ -57,91 +57,96 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                  <Component id="B3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="dept" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="92" pref="92" max="-2" attributes="0"/>
-                  <Component id="B4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="device" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
-                  <Component id="B5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="brand" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                  <Component id="B6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="model" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="135" pref="135" max="-2" attributes="0"/>
-                  <Component id="B7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="qty" min="-2" pref="110" max="-2" attributes="0"/>
-                  <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
-                  <Component id="B8" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                  <Component id="unit" min="-2" pref="95" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
-                  <Component id="B9" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="remark" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="127" pref="127" max="-2" attributes="0"/>
-                  <Component id="B10" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="price" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="118" pref="118" max="-2" attributes="0"/>
-                  <Component id="B11" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="usage" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="128" pref="128" max="-2" attributes="0"/>
-                  <Component id="B12" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                  <Component id="date" min="-2" pref="284" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="124" pref="124" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="93" max="-2" attributes="0"/>
-                  <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" pref="93" max="-2" attributes="0"/>
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="108" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="b0" min="-2" max="-2" attributes="0"/>
-                      <Component id="B2" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
+                          <Component id="B3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                          <Component id="user" min="-2" pref="284" max="-2" attributes="0"/>
+                          <Component id="dept" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="92" pref="92" max="-2" attributes="0"/>
+                          <Component id="B4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Component id="device" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="76" pref="76" max="-2" attributes="0"/>
+                          <Component id="B5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Component id="brand" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                          <Component id="B6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Component id="model" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="135" pref="135" max="-2" attributes="0"/>
+                          <Component id="B7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Component id="qty" min="-2" pref="110" max="-2" attributes="0"/>
+                          <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
+                          <Component id="B8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                          <Component id="unit" min="-2" pref="95" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
+                          <Component id="B9" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Component id="remark" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="127" pref="127" max="-2" attributes="0"/>
+                          <Component id="B10" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Component id="price" min="-2" pref="284" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="124" pref="124" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="93" max="-2" attributes="0"/>
+                          <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                          <Component id="jButton3" min="-2" pref="93" max="-2" attributes="0"/>
+                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" pref="108" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="no" min="-2" pref="152" max="-2" attributes="0"/>
-                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          <Component id="jButton5" min="-2" pref="85" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="b0" min="-2" max="-2" attributes="0"/>
+                              <Component id="B2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                                  <Component id="user" min="-2" pref="284" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="no" min="-2" pref="152" max="-2" attributes="0"/>
+                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jButton5" min="-2" pref="85" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="B12" min="-2" max="-2" attributes="0"/>
+                              <Component id="B11" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="usage" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="it" min="-2" pref="284" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -154,7 +159,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="no" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="no" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="b0" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -209,12 +214,17 @@
                       <Component id="B11" min="-2" max="-2" attributes="0"/>
                       <Component id="usage" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="B12" min="-2" max="-2" attributes="0"/>
-                      <Component id="date" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                          <Component id="it" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="B12" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
@@ -400,14 +410,14 @@
             <Property name="text" type="java.lang.String" value="User Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="date">
+        <Component class="javax.swing.JTextField" name="it">
         </Component>
         <Component class="javax.swing.JLabel" name="B12">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Date"/>
+            <Property name="text" type="java.lang.String" value="IT comment"/>
           </Properties>
         </Component>
       </SubComponents>

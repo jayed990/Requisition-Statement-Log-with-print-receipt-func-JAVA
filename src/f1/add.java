@@ -1,6 +1,7 @@
 package f1;
 
 
+import f2.*;
 import java.awt.event.KeyEvent;
 import static java.lang.Integer.valueOf;
 import java.sql.Connection;
@@ -58,7 +59,6 @@ public class add extends javax.swing.JFrame {
         B3 = new javax.swing.JLabel();
         B5 = new javax.swing.JLabel();
         device = new javax.swing.JTextField();
-        brand = new javax.swing.JTextField();
         B6 = new javax.swing.JLabel();
         model = new javax.swing.JTextField();
         B7 = new javax.swing.JLabel();
@@ -69,12 +69,13 @@ public class add extends javax.swing.JFrame {
         no = new javax.swing.JTextField();
         price = new javax.swing.JTextField();
         B10 = new javax.swing.JLabel();
-        remark = new javax.swing.JTextField();
         B9 = new javax.swing.JLabel();
         B11 = new javax.swing.JLabel();
         usage = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         dept = new javax.swing.JComboBox<>();
+        remark = new javax.swing.JComboBox<>();
+        brand = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -126,7 +127,7 @@ public class add extends javax.swing.JFrame {
         B5.setBackground(new java.awt.Color(0, 0, 0));
         B5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         B5.setForeground(new java.awt.Color(255, 255, 255));
-        B5.setText("Brand/Item");
+        B5.setText("Item");
 
         device.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +138,7 @@ public class add extends javax.swing.JFrame {
         B6.setBackground(new java.awt.Color(0, 0, 0));
         B6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         B6.setForeground(new java.awt.Color(255, 255, 255));
-        B6.setText("Model/Conf");
+        B6.setText("Model");
 
         B7.setBackground(new java.awt.Color(0, 0, 0));
         B7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -204,38 +205,37 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        remark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Reason", "Broken", "Change", "Damaged", "New", "Repair" }));
+
+        brand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item", "ADAPTER  (适配器)", "BARCODE SCANNER (扫码机)", "COMPUTER CASING  (电脑外壳)", "CMOS BATTERY (电池)", "COMPUTER (电脑)", "FUSION COVER (融合盖)", "FUSION ROLLER (融合辊)", "HARD-DISK (硬盘)", "KEYBOARD (键盘)", "LAPTOP CHARGER (笔记本电脑充电器)", "MONITOR (监控)", "MOTHERBOARD (母板)", "MOUSE (老鼠)", "PICK UP ROLLER (捡起滚子)", "POWER CABLE (电源线)", "POWERSUPPLY (电源)", "PRINTER (打印机)", "PRINTER POWER SUPPLY (打印机电源)", "PROCESSOR (处理器)", "RAM (内存)", "TELEPHONE SET (电话机)", "UPS (电源单位)", "UPS BATTERY (电源单位 电池)", "SSD (固态硬盘)", "Digital Camera Display Ribbon 数码相机显示屏色带", "Digital Camera Charging Port IC 数码相机充电口IC", "VGA Cable (VGA线 )", "Belt Bearing (皮带轴承)", "Main Roller Gear (主滚轮)", "Tructor Gear Set (拖拉机齿轮组)", " " }));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 47, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(B10)
+                                    .addComponent(B9)
+                                    .addComponent(B11))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(11, 11, 11))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(B10)
-                                            .addComponent(B9)
-                                            .addComponent(B11))
-                                        .addGap(26, 26, 26)))
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(34, 34, 34)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(usage)
-                                    .addComponent(remark)
-                                    .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(price)
+                                        .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(B7)
@@ -248,17 +248,18 @@ public class add extends javax.swing.JFrame {
                                 .addGap(26, 26, 26)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(device)
-                                    .addComponent(brand)
                                     .addComponent(model)
                                     .addComponent(user)
+                                    .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(brand, 0, 284, Short.MAX_VALUE)
+                                    .addComponent(no)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(33, 33, 33)
                                         .addComponent(B8)
                                         .addGap(18, 18, 18)
-                                        .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                .addContainerGap(96, Short.MAX_VALUE))
+                                        .addComponent(unit)))))))
+                .addGap(119, 119, 119))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,10 +308,10 @@ public class add extends javax.swing.JFrame {
                     .addComponent(B11))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
 
@@ -325,7 +326,7 @@ public class add extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(579, 611));
+        setSize(new java.awt.Dimension(639, 611));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -340,11 +341,11 @@ public class add extends javax.swing.JFrame {
             String USER = user.getText();
             String DEPT = (String) dept.getSelectedItem();
             String DEVICE = device.getText();
-            String BRAND = brand.getText();
+            String BRAND = (String) brand.getSelectedItem();
             String MODEL = model.getText();
             int QTY = Integer.parseInt(qty.getText());
             String UNIT = unit.getText();
-            String REMARK = remark.getText();
+            String REMARK = (String) remark.getSelectedItem();
             int PRICE = Integer.parseInt(price.getText());
             String USAGE = usage.getText();
             
@@ -384,11 +385,9 @@ public class add extends javax.swing.JFrame {
             no.setText("");
             user.setText("");
             device.setText("");
-            brand.setText("");
             model.setText("");
             qty.setText("");
             unit.setText("");
-            remark.setText("");
             price.setText("");
             usage.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -407,11 +406,11 @@ public class add extends javax.swing.JFrame {
             String USER = user.getText();
             String DEPT = (String) dept.getSelectedItem();
             String DEVICE = device.getText();
-            String BRAND = brand.getText();
+            String BRAND = (String) brand.getSelectedItem();
             String MODEL = model.getText();
             int QTY = Integer.parseInt(qty.getText());
             String UNIT = unit.getText();
-            String REMARK = remark.getText();
+            String REMARK = (String) remark.getSelectedItem();
             int PRICE = Integer.parseInt(price.getText());
             String USAGE = usage.getText();
             
@@ -499,6 +498,7 @@ public class add extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(add.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -520,7 +520,7 @@ public class add extends javax.swing.JFrame {
     private javax.swing.JLabel B7;
     private javax.swing.JLabel B8;
     private javax.swing.JLabel B9;
-    private javax.swing.JTextField brand;
+    private javax.swing.JComboBox<String> brand;
     private javax.swing.JComboBox<String> dept;
     private javax.swing.JTextField device;
     private javax.swing.JButton jButton1;
@@ -531,7 +531,7 @@ public class add extends javax.swing.JFrame {
     private javax.swing.JTextField no;
     private javax.swing.JTextField price;
     private javax.swing.JTextField qty;
-    private javax.swing.JTextField remark;
+    private javax.swing.JComboBox<String> remark;
     private javax.swing.JTextField unit;
     private javax.swing.JTextField usage;
     private javax.swing.JTextField user;

@@ -124,7 +124,7 @@ public class main extends javax.swing.JFrame {
     private void f2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        f2.home object = new f2.home();
+        f2.home2 object = new f2.home2();
         object.setVisible(true);
     }//GEN-LAST:event_f2ActionPerformed
 

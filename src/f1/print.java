@@ -10,6 +10,7 @@ package f1;
  *
  * @author jayed
  */
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.print.PageFormat;
@@ -61,7 +62,7 @@ public class print extends javax.swing.JFrame {
         brand3 = new javax.swing.JTextField();
         brand4 = new javax.swing.JTextField();
         brand5 = new javax.swing.JTextField();
-        brand6 = new javax.swing.JTextField();
+        itc = new javax.swing.JTextField();
         brand7 = new javax.swing.JTextField();
         brand8 = new javax.swing.JTextField();
         brand9 = new javax.swing.JTextField();
@@ -126,7 +127,7 @@ public class print extends javax.swing.JFrame {
         b7.setBackground(new java.awt.Color(255, 255, 255));
         b7.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b7.setText("Brand 品牌");
+        b7.setText("Item 品牌");
         b7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b8.setBackground(new java.awt.Color(255, 255, 255));
@@ -211,12 +212,14 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        brand6.setText(" IT comment(Overseas):");
-        brand6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        brand6.addActionListener(new java.awt.event.ActionListener() {
+        itc.setEditable(false);
+        itc.setBackground(new java.awt.Color(255, 255, 255));
+        itc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        itc.setText(" IT comment(Overseas):");
+        itc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        itc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brand6ActionPerformed(evt);
+                itcActionPerformed(evt);
             }
         });
 
@@ -468,7 +471,7 @@ public class print extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(brand5, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(brand6, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(itc, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(brand7, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -589,7 +592,7 @@ public class print extends javax.swing.JFrame {
                     .addComponent(brand4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(brand5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(brand6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(itc, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(brand7, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(brand8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -721,9 +724,9 @@ public class print extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_brand5ActionPerformed
 
-    private void brand6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brand6ActionPerformed
+    private void itcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itcActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_brand6ActionPerformed
+    }//GEN-LAST:event_itcActionPerformed
 
     private void brand7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brand7ActionPerformed
         // TODO add your handling code here:
@@ -828,6 +831,7 @@ public class print extends javax.swing.JFrame {
                 price.setText(String.format("%s",rs.getInt("price")));
                 usage.setText(rs.getString("Duration of usage"));
                 date.setText(rs.getString("Date"));
+                itc.setText(rs.getString("It"));
 
             }else{
                 JOptionPane.showMessageDialog(null, "Not Found!!");
@@ -880,6 +884,7 @@ public class print extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(print.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -905,7 +910,6 @@ public class print extends javax.swing.JFrame {
     private javax.swing.JTextField brand3;
     private javax.swing.JTextField brand4;
     private javax.swing.JTextField brand5;
-    private javax.swing.JTextField brand6;
     private javax.swing.JTextField brand7;
     private javax.swing.JTextField brand8;
     private javax.swing.JTextField brand9;
@@ -915,6 +919,7 @@ public class print extends javax.swing.JFrame {
     private javax.swing.JTextField device1;
     private javax.swing.JTextField device2;
     private javax.swing.JTextField device5;
+    private javax.swing.JTextField itc;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField model;

@@ -1,6 +1,7 @@
 package f1;
 
 
+import f2.*;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -69,7 +70,7 @@ public class edit extends javax.swing.JFrame {
         B4 = new javax.swing.JLabel();
         B3 = new javax.swing.JLabel();
         B2 = new javax.swing.JLabel();
-        date = new javax.swing.JTextField();
+        it = new javax.swing.JTextField();
         B12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -175,84 +176,86 @@ public class edit extends javax.swing.JFrame {
         B2.setText("User Name");
 
         B12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        B12.setText("Date");
+        B12.setText("IT comment");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(B3)
-                .addGap(26, 26, 26)
-                .addComponent(dept, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(B4)
-                .addGap(26, 26, 26)
-                .addComponent(device, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(B5)
-                .addGap(26, 26, 26)
-                .addComponent(brand, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(B6)
-                .addGap(26, 26, 26)
-                .addComponent(model, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addComponent(B7)
-                .addGap(26, 26, 26)
-                .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(B8)
-                .addGap(18, 18, 18)
-                .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(B9)
-                .addGap(26, 26, 26)
-                .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(B10)
-                .addGap(26, 26, 26)
-                .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(B11)
-                .addGap(26, 26, 26)
-                .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(B12)
-                .addGap(26, 26, 26)
-                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(b0)
-                    .addComponent(B2))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(B3)
                         .addGap(26, 26, 26)
-                        .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(dept, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(B4)
+                        .addGap(26, 26, 26)
+                        .addComponent(device, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(B5)
+                        .addGap(26, 26, 26)
+                        .addComponent(brand, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(B6)
+                        .addGap(26, 26, 26)
+                        .addComponent(model, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(B7)
+                        .addGap(26, 26, 26)
+                        .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(B8)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)
+                        .addComponent(unit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(B9)
+                        .addGap(26, 26, 26)
+                        .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(127, 127, 127)
+                        .addComponent(B10)
+                        .addGap(26, 26, 26)
+                        .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(b0)
+                            .addComponent(B2))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(B12)
+                            .addComponent(B11))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(it, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +266,7 @@ public class edit extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(b0)))
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
@@ -305,11 +308,14 @@ public class edit extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(B11)
                     .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(B12)
-                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(it, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(B12)))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
@@ -339,7 +345,8 @@ public class edit extends javax.swing.JFrame {
 
             stmt = conn.createStatement();
 
-            int NO = Integer.parseInt(no.getText());
+            //int NO = Integer.parseInt(no.getText());
+            String NO = no.getText();
             String USER = user.getText();
             String DEPT = dept.getText();
             String DEVICE = device.getText();
@@ -350,9 +357,9 @@ public class edit extends javax.swing.JFrame {
             String REMARK = remark.getText();
             int PRICE = Integer.parseInt(price.getText());
             String USAGE = usage.getText();
-            String DATE = date.getText();
+            String IT = it.getText();
 
-            String sql = "UPDATE `f1` SET `No`='"+NO+"',`User Name`='"+USER+"',`Department`='"+DEPT+"',`Device Number`='"+DEVICE+"',`Brand/Item`='"+BRAND+"',`Model/Configuration`='"+MODEL+"',`Qty`='"+QTY+"',`Unit`='"+UNIT+"',`Remarks`='"+REMARK+"',`Price`='"+PRICE+"',`Duration of usage`='"+USAGE+"',`Date`='"+DATE+"' WHERE No = '"+NO+"' ";
+            String sql = "UPDATE `f1` SET `No`='"+NO+"',`User Name`='"+USER+"',`Department`='"+DEPT+"',`Device Number`='"+DEVICE+"',`Brand/Item`='"+BRAND+"',`Model/Configuration`='"+MODEL+"',`Qty`='"+QTY+"',`Unit`='"+UNIT+"',`Remarks`='"+REMARK+"',`Price`='"+PRICE+"',`Duration of usage`='"+USAGE+"',`It`='"+IT+"' WHERE No = '"+NO+"' ";
 
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Data Updated!!");
@@ -378,7 +385,7 @@ public class edit extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             stmt = conn.createStatement();
-            int NO = Integer.parseInt(no.getText());
+            String NO = no.getText();
 
             String sql = "DELETE FROM `f1` WHERE No = '"+NO+"'";
             stmt.executeUpdate(sql);
@@ -394,7 +401,7 @@ public class edit extends javax.swing.JFrame {
         // TODO add your handling code here:
                         try{
             stmt = conn.createStatement();
-            int NO = Integer.parseInt(no.getText());
+            String NO = no.getText();
 
             String sql = "SELECT * FROM f1 WHERE No = '"+NO+"' ";
             rs = stmt.executeQuery(sql);
@@ -411,7 +418,7 @@ public class edit extends javax.swing.JFrame {
                 remark.setText(rs.getString("Remarks"));
                 price.setText(String.format("%s",rs.getInt("price")));
                 usage.setText(rs.getString("Duration of usage"));
-                date.setText(rs.getString("Date"));
+                it.setText(rs.getString("It"));
                 
             }else{
                 JOptionPane.showMessageDialog(null, "Not Found!!");
@@ -468,7 +475,7 @@ public class edit extends javax.swing.JFrame {
                 remark.setText(rs.getString("Remarks"));
                 price.setText(String.format("%s",rs.getInt("price")));
                 usage.setText(rs.getString("Duration of usage"));
-                date.setText(rs.getString("Date"));
+                it.setText(rs.getString("Date"));
                 
 
             }else{
@@ -509,6 +516,7 @@ public class edit extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(edit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -532,9 +540,9 @@ public class edit extends javax.swing.JFrame {
     private javax.swing.JLabel B9;
     private javax.swing.JLabel b0;
     private javax.swing.JTextField brand;
-    private javax.swing.JTextField date;
     private javax.swing.JTextField dept;
     private javax.swing.JTextField device;
+    private javax.swing.JTextField it;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

@@ -10,9 +10,11 @@ package f1;
  *
  * @author jayed
  */
+import f2.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Vector;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -269,6 +271,7 @@ public final class list extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(list.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
