@@ -1,6 +1,5 @@
 package f1;
 
-import f2.*;
 import java.sql.DriverManager;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
@@ -23,10 +22,10 @@ public class dbcon
     final static String DB_URL = "jdbc:mysql://localhost:3306/forms";
     final static String USER = "root";
     final static String PASS = "";
-    //172.18.152.24//172.18.152.100
+    //server: 172.18.152.24//test: 172.18.152.100//oggy: 192.168.1.55
 */
 //web
-    
+        
     final static String DB_URL = "jdbc:mysql://192.168.1.55:3306/forms";
     final static String USER = "dba";
     final static String PASS = "1234";

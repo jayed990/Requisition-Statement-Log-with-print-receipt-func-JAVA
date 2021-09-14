@@ -187,7 +187,7 @@
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jayed\Documents\NetBeansProjects\student\src\project Image\submit.png"/>
+              <Image iconType="3" name="/Images/submit.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
@@ -199,7 +199,7 @@
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jayed\Documents\NetBeansProjects\student\src\project Image\back.png"/>
+              <Image iconType="3" name="/Images/back.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
@@ -396,7 +396,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jayed\Documents\NetBeansProjects\student\src\project Image\cancel1.png"/>
+              <Image iconType="3" name="/Images/cancel.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Reset"/>
           </Properties>
@@ -406,24 +406,50 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="dept">
           <Properties>
+            <Property name="maximumRowCount" type="int" value="15"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="16">
-                <StringItem index="0" value="Select Department"/>
-                <StringItem index="1" value="Lean3A"/>
-                <StringItem index="2" value="Lean1A"/>
-                <StringItem index="3" value="Lean2A"/>
-                <StringItem index="4" value="Lean2C"/>
-                <StringItem index="5" value="Admin"/>
-                <StringItem index="6" value="B1F"/>
-                <StringItem index="7" value="BPMC"/>
-                <StringItem index="8" value="GA"/>
-                <StringItem index="9" value="HRSD"/>
-                <StringItem index="10" value="ME/CI/IE"/>
-                <StringItem index="11" value="TQS"/>
-                <StringItem index="12" value="PAC1"/>
-                <StringItem index="13" value="BPMC"/>
-                <StringItem index="14" value="TTC1"/>
-                <StringItem index="15" value=" "/>
+              <StringArray count="41">
+                <StringItem index="0" value=""/>
+                <StringItem index="1" value="Financial"/>
+                <StringItem index="2" value="Shipping"/>
+                <StringItem index="3" value="Customs"/>
+                <StringItem index="4" value="Admin GA"/>
+                <StringItem index="5" value="HR &amp; SD"/>
+                <StringItem index="6" value="PAC"/>
+                <StringItem index="7" value="Business"/>
+                <StringItem index="8" value="PC"/>
+                <StringItem index="9" value="Warehouse"/>
+                <StringItem index="10" value="IE"/>
+                <StringItem index="11" value="A1F Affairs"/>
+                <StringItem index="12" value="A2F Affairs"/>
+                <StringItem index="13" value="B1F Affairs"/>
+                <StringItem index="14" value="B2F Affairs"/>
+                <StringItem index="15" value="C1F Affairs"/>
+                <StringItem index="16" value="QC"/>
+                <StringItem index="17" value="Incoming Materials"/>
+                <StringItem index="18" value="TTC"/>
+                <StringItem index="19" value="Lamination"/>
+                <StringItem index="20" value="Cutting Dye"/>
+                <StringItem index="21" value="GA Warehouse"/>
+                <StringItem index="22" value="Electrical"/>
+                <StringItem index="23" value="Maintenance"/>
+                <StringItem index="24" value="Orisol Computer Stitching"/>
+                <StringItem index="25" value="Lean 1A"/>
+                <StringItem index="26" value="Lean 2A"/>
+                <StringItem index="27" value="Lean 3A"/>
+                <StringItem index="28" value="Lean 1B"/>
+                <StringItem index="29" value="Lean 2B"/>
+                <StringItem index="30" value="Lean 3B"/>
+                <StringItem index="31" value="Lean 1C"/>
+                <StringItem index="32" value="Lean 2C"/>
+                <StringItem index="33" value="Lean 3C"/>
+                <StringItem index="34" value="Lean 1D"/>
+                <StringItem index="35" value="Lean 2D"/>
+                <StringItem index="36" value="Lean 3D"/>
+                <StringItem index="37" value="IT"/>
+                <StringItem index="38" value="Stockfitting"/>
+                <StringItem index="39" value="Engineering"/>
+                <StringItem index="40" value=""/>
               </StringArray>
             </Property>
           </Properties>
@@ -436,9 +462,10 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="remark">
           <Properties>
+            <Property name="maximumRowCount" type="int" value="15"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="6">
-                <StringItem index="0" value="Select Reason"/>
+                <StringItem index="0" value=""/>
                 <StringItem index="1" value="Broken"/>
                 <StringItem index="2" value="Change"/>
                 <StringItem index="3" value="Damaged"/>
@@ -453,9 +480,10 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="brand">
           <Properties>
+            <Property name="maximumRowCount" type="int" value="15"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="32">
-                <StringItem index="0" value="Select Item"/>
+                <StringItem index="0" value=""/>
                 <StringItem index="1" value="ADAPTER  (&#x9002;&#x914d;&#x5668;)"/>
                 <StringItem index="2" value="BARCODE SCANNER (&#x626b;&#x7801;&#x673a;)"/>
                 <StringItem index="3" value="COMPUTER CASING  (&#x7535;&#x8111;&#x5916;&#x58f3;)"/>
@@ -486,10 +514,13 @@
                 <StringItem index="28" value="Belt Bearing (&#x76ae;&#x5e26;&#x8f74;&#x627f;)"/>
                 <StringItem index="29" value="Main Roller Gear (&#x4e3b;&#x6eda;&#x8f6e;)"/>
                 <StringItem index="30" value="Tructor Gear Set (&#x62d6;&#x62c9;&#x673a;&#x9f7f;&#x8f6e;&#x7ec4;)"/>
-                <StringItem index="31" value=" "/>
+                <StringItem index="31" value=""/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="brandActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>

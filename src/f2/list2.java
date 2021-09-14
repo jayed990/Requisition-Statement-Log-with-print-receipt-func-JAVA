@@ -1,19 +1,9 @@
 package f2;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author jayed
- */
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Vector;
+
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -25,6 +15,7 @@ public final class list2 extends javax.swing.JFrame {
         Connection conn = null;
     Statement stmt =  null;
     ResultSet rs = null;
+    
     public list2() {
         super("LIST");
         initComponents();
@@ -34,7 +25,7 @@ public final class list2 extends javax.swing.JFrame {
     public void showRecord(){
     try{
         stmt = conn.createStatement();
-        String sql = "Select * FROM f1";
+        String sql = "Select * FROM f2";
         ResultSet res = stmt.executeQuery(sql);
         Table.setModel(DbUtils.resultSetToTableModel(res));
         
@@ -63,7 +54,7 @@ public final class list2 extends javax.swing.JFrame {
 
         Table.setAutoCreateRowSorter(true);
         Table.setBackground(new java.awt.Color(0, 0, 102));
-        Table.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Table.setFont(new java.awt.Font("Microsoft JhengHei", 0, 12)); // NOI18N
         Table.setForeground(new java.awt.Color(255, 255, 255));
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -192,7 +183,7 @@ public final class list2 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(Table);
         Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\jayed\\Documents\\NetBeansProjects\\student\\src\\project Image\\back.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/home.png"))); // NOI18N
         jButton4.setText("Home");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,16 +198,16 @@ public final class list2 extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1289, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(592, 592, 592))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -230,7 +221,7 @@ public final class list2 extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(1305, 581));
+        setSize(new java.awt.Dimension(1305, 615));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

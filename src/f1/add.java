@@ -1,32 +1,13 @@
 package f1;
 
-
-import f2.*;
 import java.awt.event.KeyEvent;
-import static java.lang.Integer.valueOf;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
-import static java.time.LocalDateTime.now;
-import java.time.ZoneId;
-import static javax.swing.UIManager.getString;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author jayed
- */
 public class add extends javax.swing.JFrame {
 
     /**
@@ -83,7 +64,7 @@ public class add extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ADD ENTRY", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 24))); // NOI18N
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\jayed\\Documents\\NetBeansProjects\\student\\src\\project Image\\submit.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/submit.png"))); // NOI18N
         jButton3.setText("Submit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +77,7 @@ public class add extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\jayed\\Documents\\NetBeansProjects\\student\\src\\project Image\\back.png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +171,7 @@ public class add extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jayed\\Documents\\NetBeansProjects\\student\\src\\project Image\\cancel1.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancel.png"))); // NOI18N
         jButton1.setText("Reset");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,16 +179,24 @@ public class add extends javax.swing.JFrame {
             }
         });
 
-        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Department", "Lean3A", "Lean1A", "Lean2A", "Lean2C", "Admin", "B1F", "BPMC", "GA", "HRSD", "ME/CI/IE", "TQS", "PAC1", "BPMC", "TTC1", " " }));
+        dept.setMaximumRowCount(15);
+        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Financial", "Shipping", "Customs", "Admin GA", "HR & SD", "PAC", "Business", "PC", "Warehouse", "IE", "A1F Affairs", "A2F Affairs", "B1F Affairs", "B2F Affairs", "C1F Affairs", "QC", "Incoming Materials", "TTC", "Lamination", "Cutting Dye", "GA Warehouse", "Electrical", "Maintenance", "Orisol Computer Stitching", "Lean 1A", "Lean 2A", "Lean 3A", "Lean 1B", "Lean 2B", "Lean 3B", "Lean 1C", "Lean 2C", "Lean 3C", "Lean 1D", "Lean 2D", "Lean 3D", "IT", "Stockfitting", "Engineering", "" }));
         dept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deptActionPerformed(evt);
             }
         });
 
-        remark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Reason", "Broken", "Change", "Damaged", "New", "Repair" }));
+        remark.setMaximumRowCount(15);
+        remark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Broken", "Change", "Damaged", "New", "Repair" }));
 
-        brand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Item", "ADAPTER  (适配器)", "BARCODE SCANNER (扫码机)", "COMPUTER CASING  (电脑外壳)", "CMOS BATTERY (电池)", "COMPUTER (电脑)", "FUSION COVER (融合盖)", "FUSION ROLLER (融合辊)", "HARD-DISK (硬盘)", "KEYBOARD (键盘)", "LAPTOP CHARGER (笔记本电脑充电器)", "MONITOR (监控)", "MOTHERBOARD (母板)", "MOUSE (老鼠)", "PICK UP ROLLER (捡起滚子)", "POWER CABLE (电源线)", "POWERSUPPLY (电源)", "PRINTER (打印机)", "PRINTER POWER SUPPLY (打印机电源)", "PROCESSOR (处理器)", "RAM (内存)", "TELEPHONE SET (电话机)", "UPS (电源单位)", "UPS BATTERY (电源单位 电池)", "SSD (固态硬盘)", "Digital Camera Display Ribbon 数码相机显示屏色带", "Digital Camera Charging Port IC 数码相机充电口IC", "VGA Cable (VGA线 )", "Belt Bearing (皮带轴承)", "Main Roller Gear (主滚轮)", "Tructor Gear Set (拖拉机齿轮组)", " " }));
+        brand.setMaximumRowCount(15);
+        brand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "ADAPTER  (适配器)", "BARCODE SCANNER (扫码机)", "COMPUTER CASING  (电脑外壳)", "CMOS BATTERY (电池)", "COMPUTER (电脑)", "FUSION COVER (融合盖)", "FUSION ROLLER (融合辊)", "HARD-DISK (硬盘)", "KEYBOARD (键盘)", "LAPTOP CHARGER (笔记本电脑充电器)", "MONITOR (监控)", "MOTHERBOARD (母板)", "MOUSE (老鼠)", "PICK UP ROLLER (捡起滚子)", "POWER CABLE (电源线)", "POWERSUPPLY (电源)", "PRINTER (打印机)", "PRINTER POWER SUPPLY (打印机电源)", "PROCESSOR (处理器)", "RAM (内存)", "TELEPHONE SET (电话机)", "UPS (电源单位)", "UPS BATTERY (电源单位 电池)", "SSD (固态硬盘)", "Digital Camera Display Ribbon 数码相机显示屏色带", "Digital Camera Charging Port IC 数码相机充电口IC", "VGA Cable (VGA线 )", "Belt Bearing (皮带轴承)", "Main Roller Gear (主滚轮)", "Tructor Gear Set (拖拉机齿轮组)", "" }));
+        brand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brandActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -432,46 +421,21 @@ public class add extends javax.swing.JFrame {
 
     private void noMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_noMouseClicked
         // TODO add your handling code here:
-               /* try {
-            String DEPT; 
-            DEPT = (String) dept.getSelectedItem();
-            
-            LocalDateTime date = LocalDateTime.now();  
-            DateTimeFormatter cd = DateTimeFormatter.ofPattern("yyMMdd");  
-            String formattedDate = date.format(cd);
-            
-            Statement stmt = conn.createStatement();
-            rs = stmt.executeQuery("SELECT MAX(No) FROM f1");
-        while (rs.next()) {
-            int num = 0;
 
-            int increment = 1;
-            for(int i = 0; i <= 1; i++) 
-            {
-                num += increment;
-                increment++;
-                no.setText(DEPT +" "+ formattedDate + increment);
-            }  
-            
-        }
-    } catch (Exception f) {
-        f.printStackTrace();
-    }
-    }
-     */   
-        
             String DEPT; 
             DEPT = (String) dept.getSelectedItem();
             
             LocalDateTime date = LocalDateTime.now();  
-            DateTimeFormatter cd = DateTimeFormatter.ofPattern("yyMMdd");  
+            DateTimeFormatter cd = DateTimeFormatter.ofPattern("yyyyMMdd");  
             String formattedDate = date.format(cd);
 
             no.setText(DEPT +" "+ formattedDate);
     }//GEN-LAST:event_noMouseClicked
 
-       
-        
+    private void brandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brandActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_brandActionPerformed
+
     /**
      * @param args the command line arguments
      */

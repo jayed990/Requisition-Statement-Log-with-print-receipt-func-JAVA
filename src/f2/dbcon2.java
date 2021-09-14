@@ -22,7 +22,7 @@ public class dbcon2
     final static String DB_URL = "jdbc:mysql://localhost:3306/forms";
     final static String USER = "root";
     final static String PASS = "";
-    //172.18.152.24
+    //server: 172.18.152.24//test: 172.18.152.100//oggy: 192.168.1.55
 */
 //web
     
