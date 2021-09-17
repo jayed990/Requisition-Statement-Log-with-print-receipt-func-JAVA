@@ -16,7 +16,7 @@ public class add3 extends javax.swing.JFrame {
     {
         super("ADD");
         initComponents();
-        conn = dbcon3.connection();
+        conn = DB.dbc.connection();
     }
 
     @SuppressWarnings("unchecked")

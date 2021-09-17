@@ -1,23 +1,14 @@
-package f2;
+package DB;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author jayed
- */
-public class dbcon2 
+public class dbc 
 {
         final static String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
         
- //local
+ //local 
         /*
     final static String DB_URL = "jdbc:mysql://localhost:3306/forms";
     final static String USER = "root";
@@ -25,7 +16,7 @@ public class dbcon2
     //server: 172.18.152.24//test: 172.18.152.100//oggy: 192.168.1.55
 */
 //web
-    
+        
     final static String DB_URL = "jdbc:mysql://192.168.1.55:3306/forms";
     final static String USER = "dba";
     final static String PASS = "1234";
