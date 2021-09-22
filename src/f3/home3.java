@@ -81,7 +81,7 @@ public class home3 extends javax.swing.JFrame {
                 .addGap(158, 158, 158))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(340, 340, 340)
-                .addComponent(jButton4)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(

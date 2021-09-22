@@ -8,17 +8,20 @@ import javax.swing.JOptionPane;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-public class add extends javax.swing.JFrame {
+public final class add extends javax.swing.JFrame {
 
     Connection conn = null;
     Statement stmt =  null;
     ResultSet rs = null;
+    
     
     public add() {
         
         super("ADD");
         initComponents();
         conn = DB.dbc.connection();
+        deptFillData();
+        itemFillData();
     }
 
     @SuppressWarnings("unchecked")
@@ -58,6 +61,7 @@ public class add extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ADD ENTRY", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 24))); // NOI18N
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/submit.png"))); // NOI18N
         jButton3.setText("Submit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -71,6 +75,7 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +170,7 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancel.png"))); // NOI18N
         jButton1.setText("Reset");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -173,19 +179,20 @@ public class add extends javax.swing.JFrame {
             }
         });
 
+        dept.setEditable(true);
         dept.setMaximumRowCount(15);
-        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Financial", "Shipping", "Customs", "Admin GA", "HR & SD", "PAC", "Business", "PC", "Warehouse", "IE", "A1F Affairs", "A2F Affairs", "B1F Affairs", "B2F Affairs", "C1F Affairs", "QC", "Incoming Materials", "TTC", "Lamination", "Cutting Dye", "GA Warehouse", "Electrical", "Maintenance", "Orisol Computer Stitching", "Lean 1A", "Lean 2A", "Lean 3A", "Lean 1B", "Lean 2B", "Lean 3B", "Lean 1C", "Lean 2C", "Lean 3C", "Lean 1D", "Lean 2D", "Lean 3D", "IT", "Stockfitting", "Engineering", "" }));
         dept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deptActionPerformed(evt);
             }
         });
 
+        remark.setEditable(true);
         remark.setMaximumRowCount(15);
         remark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Broken", "Change", "Damaged", "New", "Repair" }));
 
+        brand.setEditable(true);
         brand.setMaximumRowCount(15);
-        brand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "ADAPTER  (适配器)", "BARCODE SCANNER (扫码机)", "COMPUTER CASING  (电脑外壳)", "CMOS BATTERY (电池)", "COMPUTER (电脑)", "FUSION COVER (融合盖)", "FUSION ROLLER (融合辊)", "HARD-DISK (硬盘)", "KEYBOARD (键盘)", "LAPTOP CHARGER (笔记本电脑充电器)", "MONITOR (监控)", "MOTHERBOARD (母板)", "MOUSE (老鼠)", "PICK UP ROLLER (捡起滚子)", "POWER CABLE (电源线)", "POWERSUPPLY (电源)", "PRINTER (打印机)", "PRINTER POWER SUPPLY (打印机电源)", "PROCESSOR (处理器)", "RAM (内存)", "TELEPHONE SET (电话机)", "UPS (电源单位)", "UPS BATTERY (电源单位 电池)", "SSD (固态硬盘)", "Digital Camera Display Ribbon 数码相机显示屏色带", "Digital Camera Charging Port IC 数码相机充电口IC", "VGA Cable (VGA线 )", "Belt Bearing (皮带轴承)", "Main Roller Gear (主滚轮)", "Tructor Gear Set (拖拉机齿轮组)", "" }));
         brand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brandActionPerformed(evt);
@@ -197,51 +204,48 @@ public class add extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(52, 99, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 47, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(B10)
+                            .addComponent(B9)
+                            .addComponent(B11))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(price)
+                                .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(B7)
+                            .addComponent(B3)
+                            .addComponent(B2)
+                            .addComponent(B4)
+                            .addComponent(B5)
+                            .addComponent(B6)
+                            .addComponent(B1))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(device)
+                            .addComponent(model)
+                            .addComponent(user)
+                            .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(brand, 0, 284, Short.MAX_VALUE)
+                            .addComponent(no)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(B10)
-                                    .addComponent(B9)
-                                    .addComponent(B11))
+                                .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(B8)
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(price)
-                                        .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(B7)
-                                    .addComponent(B3)
-                                    .addComponent(B2)
-                                    .addComponent(B4)
-                                    .addComponent(B5)
-                                    .addComponent(B6)
-                                    .addComponent(B1))
-                                .addGap(26, 26, 26)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(device)
-                                    .addComponent(model)
-                                    .addComponent(user)
-                                    .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(brand, 0, 284, Short.MAX_VALUE)
-                                    .addComponent(no)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(B8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(unit)))))))
+                                .addComponent(unit)))))
                 .addGap(119, 119, 119))
         );
         jPanel2Layout.setVerticalGroup(
@@ -290,11 +294,10 @@ public class add extends javax.swing.JFrame {
                     .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(B11))
                 .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(129, Short.MAX_VALUE))
         );
 
@@ -318,8 +321,7 @@ public class add extends javax.swing.JFrame {
         try{
 
             stmt = conn.createStatement();
-
-            //int NO = Integer.parseInt(no.getText());
+            
             String NO = no.getText();
             String USER = user.getText();
             String DEPT = (String) dept.getSelectedItem();
@@ -331,16 +333,15 @@ public class add extends javax.swing.JFrame {
             String REMARK = (String) remark.getSelectedItem();
             int PRICE = Integer.parseInt(price.getText());
             String USAGE = usage.getText();
-            
-            
 
-            String sql = "INSERT INTO f1 (`No`, `User Name`, `Department`, `Device Number`, `Brand/Item`, `Model/Configuration`, `Qty`, `Unit`, `Remarks`, `Price`, `Duration of usage`) VALUES ('"+NO+"','"+USER+"','"+DEPT+"','"+DEVICE+"','"+BRAND+"','"+MODEL+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+PRICE+"','"+USAGE+"')" ;
+            String sql = "INSERT INTO f1 (`No`, `User`, `Department`, `Device`, `Item`, `Model`, `Qty`, `Unit`, `Remarks`, `Price`, `Duration`) VALUES ('"+NO+"','"+USER+"','"+DEPT+"','"+DEVICE+"','"+BRAND+"','"+MODEL+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+PRICE+"','"+USAGE+"')" ;
             
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Data Uploaded");
 
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
+            
+            JOptionPane.showMessageDialog(null, "Fields Cannot be Empty!!");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -404,7 +405,7 @@ public class add extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Data Uploaded");
 
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Fields Cannot be Empty!!");
         }
         }
     }//GEN-LAST:event_usageKeyPressed
@@ -495,4 +496,41 @@ public class add extends javax.swing.JFrame {
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 
+    public void deptFillData()
+    {
+        try{
+            
+            stmt = conn.createStatement();
+            String sql="select Dept from dept";
+            rs=stmt.executeQuery(sql);
+            while(rs.next())
+            {
+                dept.addItem(rs.getString("Dept"));   
+            }
+
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
+        public void itemFillData()
+    {
+        try{
+            
+            stmt = conn.createStatement();
+            String sql="select Item from item";
+            rs=stmt.executeQuery(sql);
+            while(rs.next())
+            {
+                brand.addItem(rs.getString("Item"));   
+            }
+
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
 }

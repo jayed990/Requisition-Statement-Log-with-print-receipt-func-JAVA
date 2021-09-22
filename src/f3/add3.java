@@ -12,6 +12,7 @@ public class add3 extends javax.swing.JFrame {
     Statement stmt =  null;
     ResultSet rs = null;
     
+    
     public add3() 
     {
         super("ADD");
@@ -44,7 +45,8 @@ public class add3 extends javax.swing.JFrame {
         B6 = new javax.swing.JLabel();
         B12 = new javax.swing.JLabel();
         item = new javax.swing.JTextField();
-        war = new javax.swing.JComboBox<>();
+        Yes = new javax.swing.JRadioButton();
+        No = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -52,6 +54,7 @@ public class add3 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ADD ENTRY", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 24))); // NOI18N
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/submit.png"))); // NOI18N
         jButton3.setText("Submit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +68,7 @@ public class add3 extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +103,7 @@ public class add3 extends javax.swing.JFrame {
         B9.setForeground(new java.awt.Color(255, 255, 255));
         B9.setText("Supplier");
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancel.png"))); // NOI18N
         jButton1.setText("Reset");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +197,23 @@ public class add3 extends javax.swing.JFrame {
             }
         });
 
-        war.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Yes", "No" }));
+        Yes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Yes.setForeground(new java.awt.Color(255, 255, 255));
+        Yes.setText("Yes");
+        Yes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                YesActionPerformed(evt);
+            }
+        });
+
+        No.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        No.setForeground(new java.awt.Color(255, 255, 255));
+        No.setText("No");
+        No.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -201,18 +222,18 @@ public class add3 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addGap(0, 68, Short.MAX_VALUE)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(B6)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -247,7 +268,10 @@ public class add3 extends javax.swing.JFrame {
                                     .addComponent(sup, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(1, 1, 1))
                             .addComponent(item, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(war, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(Yes)
+                                .addGap(18, 18, 18)
+                                .addComponent(No)))))
                 .addGap(119, 119, 119))
         );
         jPanel2Layout.setVerticalGroup(
@@ -277,10 +301,11 @@ public class add3 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(B2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(13, 13, 13)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B6)
-                    .addComponent(war, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Yes)
+                    .addComponent(No))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(wars, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -289,13 +314,12 @@ public class add3 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ware, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(B10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(66, 66, 66)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(178, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -309,7 +333,7 @@ public class add3 extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(639, 667));
+        setSize(new java.awt.Dimension(639, 582));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -325,7 +349,11 @@ public class add3 extends javax.swing.JFrame {
             String DEPT = dept.getText();
             String SUP = sup.getText();
             String PUR = sdf.format(pur.getDate());
-            String WAR = (String) war.getSelectedItem();
+            String WAR = "Yes";
+            if(No.isSelected())
+            {
+                WAR = "No";
+            }
             String WARS = sdf.format(wars.getDate());
             String WARE = sdf.format(ware.getDate());
             
@@ -406,6 +434,14 @@ public class add3 extends javax.swing.JFrame {
  
     }//GEN-LAST:event_warePropertyChange
 
+    private void NoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NoActionPerformed
+
+    private void YesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_YesActionPerformed
+
        
         
     /**
@@ -460,6 +496,8 @@ public class add3 extends javax.swing.JFrame {
     private javax.swing.JLabel B5;
     private javax.swing.JLabel B6;
     private javax.swing.JLabel B9;
+    private javax.swing.JRadioButton No;
+    private javax.swing.JRadioButton Yes;
     private javax.swing.JTextField conf;
     private javax.swing.JTextField dept;
     private javax.swing.JTextField item;
@@ -470,9 +508,8 @@ public class add3 extends javax.swing.JFrame {
     private javax.swing.JTextField no;
     private com.toedter.calendar.JDateChooser pur;
     private javax.swing.JTextField sup;
-    private javax.swing.JComboBox<String> war;
     private com.toedter.calendar.JDateChooser ware;
     private com.toedter.calendar.JDateChooser wars;
     // End of variables declaration//GEN-END:variables
-
+    
 }

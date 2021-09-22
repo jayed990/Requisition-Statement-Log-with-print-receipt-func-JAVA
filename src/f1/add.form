@@ -54,59 +54,54 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                  <EmptySpace min="52" pref="99" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="jButton4" min="-2" pref="108" max="-2" attributes="0"/>
-                          <EmptySpace pref="60" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButton1" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButton3" min="-2" pref="113" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="B10" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B9" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B11" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="usage" min="-2" pref="285" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="price" max="32767" attributes="0"/>
-                                          <Component id="remark" min="-2" pref="285" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                              <Component id="B10" min="-2" max="-2" attributes="0"/>
+                              <Component id="B9" min="-2" max="-2" attributes="0"/>
+                              <Component id="B11" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="usage" min="-2" pref="285" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="price" max="32767" attributes="0"/>
+                                  <Component id="remark" min="-2" pref="285" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="B7" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B6" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="B1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="device" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="model" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="user" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="dept" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="brand" alignment="0" pref="284" max="32767" attributes="0"/>
-                                      <Component id="no" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="qty" min="-2" pref="110" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                          <Component id="B8" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="unit" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="B7" min="-2" max="-2" attributes="0"/>
+                              <Component id="B3" min="-2" max="-2" attributes="0"/>
+                              <Component id="B2" min="-2" max="-2" attributes="0"/>
+                              <Component id="B4" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="B5" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="B6" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="B1" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="device" alignment="0" max="32767" attributes="0"/>
+                              <Component id="model" alignment="0" max="32767" attributes="0"/>
+                              <Component id="user" alignment="0" max="32767" attributes="0"/>
+                              <Component id="dept" alignment="0" max="32767" attributes="0"/>
+                              <Component id="brand" alignment="0" pref="284" max="32767" attributes="0"/>
+                              <Component id="no" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="qty" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="B8" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="unit" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -171,12 +166,10 @@
                       <Component id="B11" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton3" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                          <Component id="jButton4" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton3" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="jButton4" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="129" max="32767" attributes="0"/>
               </Group>
@@ -186,6 +179,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="1"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/submit.png"/>
             </Property>
@@ -198,6 +194,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="1"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/back.png"/>
             </Property>
@@ -395,6 +394,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="1"/>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Images/cancel.png"/>
             </Property>
@@ -406,51 +408,10 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="dept">
           <Properties>
+            <Property name="editable" type="boolean" value="true"/>
             <Property name="maximumRowCount" type="int" value="15"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="41">
-                <StringItem index="0" value=""/>
-                <StringItem index="1" value="Financial"/>
-                <StringItem index="2" value="Shipping"/>
-                <StringItem index="3" value="Customs"/>
-                <StringItem index="4" value="Admin GA"/>
-                <StringItem index="5" value="HR &amp; SD"/>
-                <StringItem index="6" value="PAC"/>
-                <StringItem index="7" value="Business"/>
-                <StringItem index="8" value="PC"/>
-                <StringItem index="9" value="Warehouse"/>
-                <StringItem index="10" value="IE"/>
-                <StringItem index="11" value="A1F Affairs"/>
-                <StringItem index="12" value="A2F Affairs"/>
-                <StringItem index="13" value="B1F Affairs"/>
-                <StringItem index="14" value="B2F Affairs"/>
-                <StringItem index="15" value="C1F Affairs"/>
-                <StringItem index="16" value="QC"/>
-                <StringItem index="17" value="Incoming Materials"/>
-                <StringItem index="18" value="TTC"/>
-                <StringItem index="19" value="Lamination"/>
-                <StringItem index="20" value="Cutting Dye"/>
-                <StringItem index="21" value="GA Warehouse"/>
-                <StringItem index="22" value="Electrical"/>
-                <StringItem index="23" value="Maintenance"/>
-                <StringItem index="24" value="Orisol Computer Stitching"/>
-                <StringItem index="25" value="Lean 1A"/>
-                <StringItem index="26" value="Lean 2A"/>
-                <StringItem index="27" value="Lean 3A"/>
-                <StringItem index="28" value="Lean 1B"/>
-                <StringItem index="29" value="Lean 2B"/>
-                <StringItem index="30" value="Lean 3B"/>
-                <StringItem index="31" value="Lean 1C"/>
-                <StringItem index="32" value="Lean 2C"/>
-                <StringItem index="33" value="Lean 3C"/>
-                <StringItem index="34" value="Lean 1D"/>
-                <StringItem index="35" value="Lean 2D"/>
-                <StringItem index="36" value="Lean 3D"/>
-                <StringItem index="37" value="IT"/>
-                <StringItem index="38" value="Stockfitting"/>
-                <StringItem index="39" value="Engineering"/>
-                <StringItem index="40" value=""/>
-              </StringArray>
+              <StringArray count="0"/>
             </Property>
           </Properties>
           <Events>
@@ -462,6 +423,7 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="remark">
           <Properties>
+            <Property name="editable" type="boolean" value="true"/>
             <Property name="maximumRowCount" type="int" value="15"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="6">
@@ -480,42 +442,10 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="brand">
           <Properties>
+            <Property name="editable" type="boolean" value="true"/>
             <Property name="maximumRowCount" type="int" value="15"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="32">
-                <StringItem index="0" value=""/>
-                <StringItem index="1" value="ADAPTER  (&#x9002;&#x914d;&#x5668;)"/>
-                <StringItem index="2" value="BARCODE SCANNER (&#x626b;&#x7801;&#x673a;)"/>
-                <StringItem index="3" value="COMPUTER CASING  (&#x7535;&#x8111;&#x5916;&#x58f3;)"/>
-                <StringItem index="4" value="CMOS BATTERY (&#x7535;&#x6c60;)"/>
-                <StringItem index="5" value="COMPUTER (&#x7535;&#x8111;)"/>
-                <StringItem index="6" value="FUSION COVER (&#x878d;&#x5408;&#x76d6;)"/>
-                <StringItem index="7" value="FUSION ROLLER (&#x878d;&#x5408;&#x8f8a;)"/>
-                <StringItem index="8" value="HARD-DISK (&#x786c;&#x76d8;)"/>
-                <StringItem index="9" value="KEYBOARD (&#x952e;&#x76d8;)"/>
-                <StringItem index="10" value="LAPTOP CHARGER (&#x7b14;&#x8bb0;&#x672c;&#x7535;&#x8111;&#x5145;&#x7535;&#x5668;)"/>
-                <StringItem index="11" value="MONITOR (&#x76d1;&#x63a7;)"/>
-                <StringItem index="12" value="MOTHERBOARD (&#x6bcd;&#x677f;)"/>
-                <StringItem index="13" value="MOUSE (&#x8001;&#x9f20;)"/>
-                <StringItem index="14" value="PICK UP ROLLER (&#x6361;&#x8d77;&#x6eda;&#x5b50;)"/>
-                <StringItem index="15" value="POWER CABLE (&#x7535;&#x6e90;&#x7ebf;)"/>
-                <StringItem index="16" value="POWERSUPPLY (&#x7535;&#x6e90;)"/>
-                <StringItem index="17" value="PRINTER (&#x6253;&#x5370;&#x673a;)"/>
-                <StringItem index="18" value="PRINTER POWER SUPPLY (&#x6253;&#x5370;&#x673a;&#x7535;&#x6e90;)"/>
-                <StringItem index="19" value="PROCESSOR (&#x5904;&#x7406;&#x5668;)"/>
-                <StringItem index="20" value="RAM (&#x5185;&#x5b58;)"/>
-                <StringItem index="21" value="TELEPHONE SET (&#x7535;&#x8bdd;&#x673a;)"/>
-                <StringItem index="22" value="UPS (&#x7535;&#x6e90;&#x5355;&#x4f4d;)"/>
-                <StringItem index="23" value="UPS BATTERY (&#x7535;&#x6e90;&#x5355;&#x4f4d; &#x7535;&#x6c60;)"/>
-                <StringItem index="24" value="SSD (&#x56fa;&#x6001;&#x786c;&#x76d8;)"/>
-                <StringItem index="25" value="Digital Camera Display Ribbon &#x6570;&#x7801;&#x76f8;&#x673a;&#x663e;&#x793a;&#x5c4f;&#x8272;&#x5e26;"/>
-                <StringItem index="26" value="Digital Camera Charging Port IC &#x6570;&#x7801;&#x76f8;&#x673a;&#x5145;&#x7535;&#x53e3;IC"/>
-                <StringItem index="27" value="VGA Cable (VGA&#x7ebf; )"/>
-                <StringItem index="28" value="Belt Bearing (&#x76ae;&#x5e26;&#x8f74;&#x627f;)"/>
-                <StringItem index="29" value="Main Roller Gear (&#x4e3b;&#x6eda;&#x8f6e;)"/>
-                <StringItem index="30" value="Tructor Gear Set (&#x62d6;&#x62c9;&#x673a;&#x9f7f;&#x8f6e;&#x7ec4;)"/>
-                <StringItem index="31" value=""/>
-              </StringArray>
+              <StringArray count="0"/>
             </Property>
           </Properties>
           <Events>

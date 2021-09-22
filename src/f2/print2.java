@@ -78,8 +78,8 @@ public class print2 extends javax.swing.JFrame {
         search = new javax.swing.JButton();
         print = new javax.swing.JButton();
         back = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         no = new javax.swing.JTextField();
+        back1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -629,6 +629,7 @@ public class print2 extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 51, 51));
 
+        search.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/src.png"))); // NOI18N
         search.setText("Search");
         search.addActionListener(new java.awt.event.ActionListener() {
@@ -637,6 +638,7 @@ public class print2 extends javax.swing.JFrame {
             }
         });
 
+        print.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         print.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/submit.png"))); // NOI18N
         print.setText("Print");
         print.addActionListener(new java.awt.event.ActionListener() {
@@ -645,6 +647,7 @@ public class print2 extends javax.swing.JFrame {
             }
         });
 
+        back.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -653,11 +656,12 @@ public class print2 extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/man.png"))); // NOI18N
-        jButton1.setText("Populate");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        back1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        back1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/man.png"))); // NOI18N
+        back1.setText("List");
+        back1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                back1ActionPerformed(evt);
             }
         });
 
@@ -670,17 +674,14 @@ public class print2 extends javax.swing.JFrame {
                 .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(84, 84, 84)
+                .addGap(145, 145, 145)
                 .addComponent(print, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(back1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(103, 103, 103)
                 .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(72, 72, 72))
         );
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, search});
-
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -690,11 +691,11 @@ public class print2 extends javax.swing.JFrame {
                     .addComponent(print)
                     .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(back1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, print, search});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {print, search});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -702,7 +703,7 @@ public class print2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(ppanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 30, Short.MAX_VALUE))
+                .addGap(0, 36, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -722,9 +723,17 @@ public class print2 extends javax.swing.JFrame {
         try{
             stmt = conn.createStatement();
             String NO = no.getText();
+            String ITEM = item.getText();
+            
 
-            String sql = "SELECT * FROM f2 WHERE No = '"+NO+"' ";
-            rs = stmt.executeQuery(sql);
+
+            String sql1 = "SELECT * FROM f2 WHERE No = '"+NO+"'";              
+            String sql2 = "SELECT * FROM il WHERE Item = '"+ITEM+"'";
+            
+            stmt.addBatch(sql1);
+            stmt.addBatch(sql2);
+      
+      ResultSet rs = stmt.executeQuery("select * from f2,il");
 
             if (rs.next()){
 
@@ -737,6 +746,9 @@ public class print2 extends javax.swing.JFrame {
                 remark.setText(rs.getString("Remarks"));
                 ldate.setText(rs.getString("LDate"));
                 
+                up.setText(rs.getString("UP"));
+                ppr.setText(rs.getString("PPR"));
+                
             }else{
                 JOptionPane.showMessageDialog(null, "Not Found!!");
             }
@@ -744,6 +756,37 @@ public class print2 extends javax.swing.JFrame {
         }catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+        
+            LocalDateTime date = LocalDateTime.now();  
+            DateTimeFormatter cd = DateTimeFormatter.ofPattern("MMMM");  
+            String formattedDate = date.format(cd);
+            month.setText(formattedDate);
+        /*
+                try{
+            stmt = conn.createStatement();
+
+            String ITEM = item.getText();
+
+            String sql = "SELECT * FROM il WHERE Item = '"+ITEM+"' ";
+            rs = stmt.executeQuery(sql);
+
+            if (rs.next()){
+                
+                up.setText(rs.getString("UP"));
+                ppr.setText(rs.getString("PPR"));
+
+            }else{
+                JOptionPane.showMessageDialog(null, "Not Found!!");
+            }
+
+        }catch(Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+            LocalDateTime date = LocalDateTime.now();  
+            DateTimeFormatter cd = DateTimeFormatter.ofPattern("MMMM");  
+            String formattedDate = date.format(cd);
+
+            month.setText(formattedDate);*/
     }//GEN-LAST:event_searchActionPerformed
 
     private void printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printActionPerformed
@@ -899,35 +942,11 @@ public class print2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_monthMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back1ActionPerformed
         // TODO add your handling code here:
-        try{
-            stmt = conn.createStatement();
-
-            String ITEM = item.getText();
-
-            String sql = "SELECT * FROM il WHERE Item = '"+ITEM+"' ";
-            rs = stmt.executeQuery(sql);
-
-            if (rs.next()){
-                
-                up.setText(rs.getString("UP"));
-                ppr.setText(rs.getString("PPR"));
-
-            }else{
-                JOptionPane.showMessageDialog(null, "Not Found!!");
-            }
-
-        }catch(Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-            LocalDateTime date = LocalDateTime.now();  
-            DateTimeFormatter cd = DateTimeFormatter.ofPattern("MMMM");  
-            String formattedDate = date.format(cd);
-
-            month.setText(formattedDate);
- 
-    }//GEN-LAST:event_jButton1ActionPerformed
+        list2 object = new list2();
+        object.setVisible(true);
+    }//GEN-LAST:event_back1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -973,6 +992,7 @@ public class print2 extends javax.swing.JFrame {
     private javax.swing.JLabel b7;
     private javax.swing.JLabel b9;
     private javax.swing.JButton back;
+    private javax.swing.JButton back1;
     private javax.swing.JTextField brand1;
     private javax.swing.JTextField brand10;
     private javax.swing.JTextField brand11;
@@ -992,7 +1012,6 @@ public class print2 extends javax.swing.JFrame {
     private javax.swing.JTextField itc1;
     private javax.swing.JTextField itc2;
     private javax.swing.JTextField item;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField ldate;

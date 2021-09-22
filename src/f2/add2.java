@@ -1,5 +1,6 @@
 package f2;
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -8,7 +9,7 @@ import javax.swing.JOptionPane;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-public class add2 extends javax.swing.JFrame {
+public final class add2 extends javax.swing.JFrame {
 
     Connection conn = null;
     Statement stmt =  null;
@@ -19,6 +20,8 @@ public class add2 extends javax.swing.JFrame {
         super("ADD");
         initComponents();
         conn = DB.dbc.connection();
+        itemFillData();
+        deptFillData();
     }
 
     @SuppressWarnings("unchecked")
@@ -50,6 +53,7 @@ public class add2 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ADD ENTRY", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 24))); // NOI18N
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/submit.png"))); // NOI18N
         jButton3.setText("Submit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -63,6 +67,7 @@ public class add2 extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -114,6 +119,7 @@ public class add2 extends javax.swing.JFrame {
         B9.setForeground(new java.awt.Color(255, 255, 255));
         B9.setText("Remarks");
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancel.png"))); // NOI18N
         jButton1.setText("Reset");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -122,8 +128,8 @@ public class add2 extends javax.swing.JFrame {
             }
         });
 
+        dept.setEditable(true);
         dept.setMaximumRowCount(15);
-        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Financial", "Shipping", "Customs", "Admin GA", "HR & SD", "PAC", "Business", "PC", "Warehouse", "IE", "A1F Affairs", "A2F Affairs", "B1F Affairs", "B2F Affairs", "C1F Affairs", "QC", "Incoming Materials", "TTC", "Lamination", "Cutting Dye", "GA Warehouse", "Electrical", "Maintenance", "Orisol Computer Stitching", "Lean 1A", "Lean 2A", "Lean 3A", "Lean 1B", "Lean 2B", "Lean 3B", "Lean 1C", "Lean 2C", "Lean 3C", "Lean 1D", "Lean 2D", "Lean 3D", "IT", "Stockfitting", "Engineering" }));
         dept.setToolTipText("");
         dept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,11 +137,12 @@ public class add2 extends javax.swing.JFrame {
             }
         });
 
+        remark.setEditable(true);
         remark.setMaximumRowCount(15);
         remark.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Finished", "Change", "Damaged", "New" }));
 
+        item.setEditable(true);
         item.setMaximumRowCount(15);
-        item.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Brother DCP-7055", "Cartridge - Cyan - C9371A", "Cartridge - Grey - C9374A", "Cartridge - Magenta - C9372A", "Cartridge - Mat Black - C940A", "Cartridge - Photo Black - C9370A", "Cartridge - Yellow - C9373A", "Epson DLQ - 3500", "EPSON L130 - Black", "EPSON L130 - Cyan", "EPSON L130 - Magenta", "EPSON L130 - Yellow", "Epson LQ - 2190", "HP Laser Jet P1005", "HP Laser Jet P1102", "HP Pro 15M - 248A", "Jolimark 9000K", "Jolimark 9000K - JMR105 Orginal", "SAMSUNG ML- 1666 - (MLT-D1043S)", "" }));
 
         B2.setBackground(new java.awt.Color(0, 0, 0));
         B2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -147,45 +154,39 @@ public class add2 extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(78, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(B2)
                         .addGap(18, 18, 18)
                         .addComponent(ldate, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(B7)
+                            .addComponent(B3)
+                            .addComponent(B5)
+                            .addComponent(B1))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(item, 0, 284, Short.MAX_VALUE)
+                            .addComponent(no)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 47, Short.MAX_VALUE)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(B7)
-                                            .addComponent(B3)
-                                            .addComponent(B5)
-                                            .addComponent(B1))
-                                        .addGap(26, 26, 26)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(item, 0, 284, Short.MAX_VALUE)
-                                            .addComponent(no)
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(33, 33, 33)
-                                                .addComponent(B8)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(unit))))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(B9)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(B8)
+                                .addGap(18, 18, 18)
+                                .addComponent(unit))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(B9)
+                        .addGap(18, 18, 18)
+                        .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(119, 119, 119))
         );
         jPanel2Layout.setVerticalGroup(
@@ -218,11 +219,10 @@ public class add2 extends javax.swing.JFrame {
                     .addComponent(B2)
                     .addComponent(ldate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -261,7 +261,7 @@ public class add2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Data Uploaded");
 
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Fields Cannot be Empty!!");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -285,6 +285,28 @@ public class add2 extends javax.swing.JFrame {
 
     private void jButton3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton3KeyPressed
         // TODO add your handling code here:    
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER){
+            try{
+            stmt = conn.createStatement();
+
+            String NO = no.getText();
+            String DEPT = (String) dept.getSelectedItem();
+            String ITEM = (String) item.getSelectedItem();
+            int QTY = Integer.parseInt(qty.getText());
+            String UNIT = unit.getText();
+            String REMARK = (String) remark.getSelectedItem();
+            SimpleDateFormat sdf = new SimpleDateFormat ("yyyy-MM-dd");
+            String LDATE = sdf.format(ldate.getDate());
+            
+            String sql = "INSERT INTO f2 (`No`, `Department`, `Item`, `Qty`, `Unit`, `Remarks`, `LDate`) VALUES ('"+NO+"','"+DEPT+"','"+ITEM+"','"+QTY+"','"+UNIT+"','"+REMARK+"','"+LDATE+"')" ;
+            
+            stmt.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null, "Data Uploaded");
+
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Fields Cannot be Empty!!");
+        }
+        }
     }//GEN-LAST:event_jButton3KeyPressed
 
     private void deptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deptActionPerformed
@@ -363,4 +385,42 @@ public class add2 extends javax.swing.JFrame {
     private javax.swing.JTextField unit;
     // End of variables declaration//GEN-END:variables
 
+            public void itemFillData()
+    {
+        try{
+            
+            stmt = conn.createStatement();
+            String sql="select Item from il";
+            rs=stmt.executeQuery(sql);
+            while(rs.next())
+            {
+                item.addItem(rs.getString("Item"));   
+            }
+
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+            
+            public void deptFillData()
+    {
+        try{
+            
+            stmt = conn.createStatement();
+            String sql="select Dept from dept";
+            rs=stmt.executeQuery(sql);
+            while(rs.next())
+            {
+                dept.addItem(rs.getString("Dept"));   
+            }
+
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+                
 }
