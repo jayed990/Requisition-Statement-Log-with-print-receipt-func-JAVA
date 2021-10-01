@@ -289,6 +289,7 @@ public class edit2 extends javax.swing.JFrame {
         // TODO add your handling code here:
                         try{
             stmt = conn.createStatement();
+            
             String NO = no.getText();
 
             String sql = "SELECT * FROM f2 WHERE No = '"+NO+"' ";

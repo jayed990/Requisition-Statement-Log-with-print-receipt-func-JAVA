@@ -130,6 +130,7 @@ public final class add2 extends javax.swing.JFrame {
 
         dept.setEditable(true);
         dept.setMaximumRowCount(15);
+        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "____________________________________________" }));
         dept.setToolTipText("");
         dept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +144,7 @@ public final class add2 extends javax.swing.JFrame {
 
         item.setEditable(true);
         item.setMaximumRowCount(15);
+        item.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "____________________________________________" }));
 
         B2.setBackground(new java.awt.Color(0, 0, 0));
         B2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -175,7 +177,7 @@ public final class add2 extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(item, 0, 284, Short.MAX_VALUE)
+                            .addComponent(item, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(no)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)

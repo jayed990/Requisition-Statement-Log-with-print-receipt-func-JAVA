@@ -57,7 +57,7 @@ public class print2 extends javax.swing.JFrame {
         dept = new javax.swing.JTextField();
         x6 = new javax.swing.JTextField();
         x3 = new javax.swing.JTextField();
-        date = new javax.swing.JTextField();
+        cdate = new javax.swing.JTextField();
         device1 = new javax.swing.JTextField();
         nox = new javax.swing.JTextField();
         device5 = new javax.swing.JTextField();
@@ -118,7 +118,7 @@ public class print2 extends javax.swing.JFrame {
         b7.setBackground(new java.awt.Color(255, 255, 255));
         b7.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b7.setText("Item 品牌");
+        b7.setText("Item 物品名称");
         b7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b9.setBackground(new java.awt.Color(255, 255, 255));
@@ -139,11 +139,11 @@ public class print2 extends javax.swing.JFrame {
         b10.setBackground(new java.awt.Color(255, 255, 255));
         b10.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b10.setText("Unit 单元");
+        b10.setText("Unit 单位");
         b10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         brand1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        brand1.setText(" OM 協理:");
+        brand1.setText(" OM 指挥官 :");
         brand1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         brand1.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +153,7 @@ public class print2 extends javax.swing.JFrame {
         });
 
         brand2.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        brand2.setText(" PM 廠務主管:");
+        brand2.setText(" PM 经理 :");
         brand2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +162,7 @@ public class print2 extends javax.swing.JFrame {
         });
 
         brand3.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        brand3.setText(" PAC Manager 企劃主管:");
+        brand3.setText(" PAC Manager 企划 :");
         brand3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +171,7 @@ public class print2 extends javax.swing.JFrame {
         });
 
         brand4.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        brand4.setText(" Dept. Manager 部門主管:");
+        brand4.setText(" Dept. Manager 部门主管 :");
         brand4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +201,7 @@ public class print2 extends javax.swing.JFrame {
 
         brand8.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
         brand8.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        brand8.setText(" Leader 單位主管:");
+        brand8.setText(" Leader 單位主管 :");
         brand8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,7 +210,7 @@ public class print2 extends javax.swing.JFrame {
         });
 
         brand9.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        brand9.setText(" Applicant 申請人:");
+        brand9.setText(" Applicant 申請人 :");
         brand9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,14 +239,14 @@ public class print2 extends javax.swing.JFrame {
         b11.setBackground(new java.awt.Color(255, 255, 255));
         b11.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b11.setText("Remarks 备注");
+        b11.setText("Remarks 原因备注");
         b11.setToolTipText("");
         b11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b12.setBackground(new java.awt.Color(255, 255, 255));
         b12.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b12.setText("Last Taken Date 上次領用日期");
+        b12.setText("Last Taken Date 上次领用日期");
         b12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         ldate.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
@@ -280,7 +280,7 @@ public class print2 extends javax.swing.JFrame {
         x3.setBackground(new java.awt.Color(255, 255, 255));
         x3.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x3.setText("Date:");
+        x3.setText("Date 日期 :");
         x3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,12 +288,12 @@ public class print2 extends javax.swing.JFrame {
             }
         });
 
-        date.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        date.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        date.addActionListener(new java.awt.event.ActionListener() {
+        cdate.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        cdate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dateActionPerformed(evt);
+                cdateActionPerformed(evt);
             }
         });
 
@@ -346,7 +346,7 @@ public class print2 extends javax.swing.JFrame {
         x7.setBackground(new java.awt.Color(255, 255, 255));
         x7.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x7.setText("Ink/Toner/Ribbon Monthly Application Form/每月碳粉匣申請單");
+        x7.setText("Ink / Toner / Ribbon Monthly Application Form / 每月碳粉匣申請單");
         x7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -354,7 +354,7 @@ public class print2 extends javax.swing.JFrame {
             }
         });
 
-        month.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
+        month.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
         month.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         month.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         month.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -372,7 +372,7 @@ public class print2 extends javax.swing.JFrame {
         x9.setBackground(new java.awt.Color(255, 255, 255));
         x9.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         x9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x9.setText("Bangladesh Pou Hung(孟加拉国蒲洪)");
+        x9.setText("Bangladesh Pou Hung(孟加拉国宝弘)");
         x9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -384,7 +384,7 @@ public class print2 extends javax.swing.JFrame {
         x4.setBackground(new java.awt.Color(255, 255, 255));
         x4.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x4.setText("Department 部:");
+        x4.setText("Department 部门 :");
         x4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -497,7 +497,7 @@ public class print2 extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cdate, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(brand1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
@@ -577,7 +577,7 @@ public class print2 extends javax.swing.JFrame {
                     .addComponent(dept, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(x6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cdate, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(b6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(b7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -600,8 +600,9 @@ public class print2 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(brand5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(itc, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(itc2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(itc1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(itc2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(itc1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
                     .addComponent(brand8)
                     .addComponent(brand73)
@@ -627,11 +628,11 @@ public class print2 extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 153));
 
         search.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/src.png"))); // NOI18N
-        search.setText("Search");
+        search.setText("FILL");
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchActionPerformed(evt);
@@ -670,13 +671,13 @@ public class print2 extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(46, 46, 46)
                 .addComponent(no, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(search)
                 .addGap(145, 145, 145)
                 .addComponent(print, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(back1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(103, 103, 103)
                 .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -720,34 +721,30 @@ public class print2 extends javax.swing.JFrame {
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         // TODO add your handling code here:
+            LocalDateTime date = LocalDateTime.now();  
+            DateTimeFormatter cd = DateTimeFormatter.ofPattern("MMMM");  
+            String formattedDate = date.format(cd);
+            month.setText(formattedDate);
+ //1           
         try{
             stmt = conn.createStatement();
+            
             String NO = no.getText();
-            String ITEM = item.getText();
-            
 
+            String sql = " SELECT * FROM f2 WHERE No = '"+NO+"'";              
 
-            String sql1 = "SELECT * FROM f2 WHERE No = '"+NO+"'";              
-            String sql2 = "SELECT * FROM il WHERE Item = '"+ITEM+"'";
-            
-            stmt.addBatch(sql1);
-            stmt.addBatch(sql2);
-      
-      ResultSet rs = stmt.executeQuery("select * from f2,il");
+            rs = stmt.executeQuery(sql);
 
             if (rs.next()){
 
                 nox.setText(rs.getString("No"));
                 dept.setText(rs.getString("Department"));
-                date.setText(rs.getString("Date"));
+                cdate.setText(rs.getString("Date"));
                 item.setText(rs.getString("Item"));
                 qty.setText(String.format("%s",rs.getInt("qty")));
                 unit.setText(rs.getString("Unit"));
                 remark.setText(rs.getString("Remarks"));
                 ldate.setText(rs.getString("LDate"));
-                
-                up.setText(rs.getString("UP"));
-                ppr.setText(rs.getString("PPR"));
                 
             }else{
                 JOptionPane.showMessageDialog(null, "Not Found!!");
@@ -756,18 +753,14 @@ public class print2 extends javax.swing.JFrame {
         }catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
-        
-            LocalDateTime date = LocalDateTime.now();  
-            DateTimeFormatter cd = DateTimeFormatter.ofPattern("MMMM");  
-            String formattedDate = date.format(cd);
-            month.setText(formattedDate);
-        /*
+//2
                 try{
             stmt = conn.createStatement();
 
             String ITEM = item.getText();
 
             String sql = "SELECT * FROM il WHERE Item = '"+ITEM+"' ";
+            
             rs = stmt.executeQuery(sql);
 
             if (rs.next()){
@@ -782,11 +775,6 @@ public class print2 extends javax.swing.JFrame {
         }catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
-            LocalDateTime date = LocalDateTime.now();  
-            DateTimeFormatter cd = DateTimeFormatter.ofPattern("MMMM");  
-            String formattedDate = date.format(cd);
-
-            month.setText(formattedDate);*/
     }//GEN-LAST:event_searchActionPerformed
 
     private void printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printActionPerformed
@@ -829,9 +817,9 @@ public class print2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_noxActionPerformed
 
-    private void dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateActionPerformed
+    private void cdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dateActionPerformed
+    }//GEN-LAST:event_cdateActionPerformed
 
     private void x3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x3ActionPerformed
         // TODO add your handling code here:
@@ -1004,7 +992,7 @@ public class print2 extends javax.swing.JFrame {
     private javax.swing.JTextField brand73;
     private javax.swing.JTextField brand8;
     private javax.swing.JTextField brand9;
-    private javax.swing.JTextField date;
+    private javax.swing.JTextField cdate;
     private javax.swing.JTextField dept;
     private javax.swing.JTextField device1;
     private javax.swing.JTextField device5;

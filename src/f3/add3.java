@@ -47,6 +47,8 @@ public class add3 extends javax.swing.JFrame {
         item = new javax.swing.JTextField();
         Yes = new javax.swing.JRadioButton();
         No = new javax.swing.JRadioButton();
+        price = new javax.swing.JTextField();
+        B13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -215,6 +217,22 @@ public class add3 extends javax.swing.JFrame {
             }
         });
 
+        price.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                priceMouseClicked(evt);
+            }
+        });
+        price.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priceActionPerformed(evt);
+            }
+        });
+
+        B13.setBackground(new java.awt.Color(0, 0, 0));
+        B13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        B13.setForeground(new java.awt.Color(255, 255, 255));
+        B13.setText("Price");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -233,7 +251,7 @@ public class add3 extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(0, 68, Short.MAX_VALUE)
+                                        .addGap(0, 78, Short.MAX_VALUE)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(B6)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -269,9 +287,13 @@ public class add3 extends javax.swing.JFrame {
                                 .addGap(1, 1, 1))
                             .addComponent(item, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(Yes)
+                                .addComponent(Yes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(No)))))
+                                .addComponent(No)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(B13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(119, 119, 119))
         );
         jPanel2Layout.setVerticalGroup(
@@ -302,10 +324,15 @@ public class add3 extends javax.swing.JFrame {
                     .addComponent(pur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(B2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(B6)
-                    .addComponent(Yes)
-                    .addComponent(No))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(B6)
+                            .addComponent(B13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(No, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Yes, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(wars, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -319,7 +346,7 @@ public class add3 extends javax.swing.JFrame {
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addGap(142, 142, 142))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -333,7 +360,7 @@ public class add3 extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(639, 582));
+        setSize(new java.awt.Dimension(649, 602));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -349,15 +376,20 @@ public class add3 extends javax.swing.JFrame {
             String DEPT = dept.getText();
             String SUP = sup.getText();
             String PUR = sdf.format(pur.getDate());
-            String WAR = "Yes";
+            String PRC = price.getText();
+            String WAR = "";
             if(No.isSelected())
             {
                 WAR = "No";
             }
+            if(Yes.isSelected())
+            {
+                WAR = "Yes";
+            }
             String WARS = sdf.format(wars.getDate());
             String WARE = sdf.format(ware.getDate());
             
-            String sql = "INSERT INTO f3 (`Item`, `SN`, `Configuration`, `Department`, `Supplier`, `Purchase`, `Warrenty`, `Start`, `End`) VALUES ('"+ITEM+"','"+NO+"','"+CONF+"','"+DEPT+"','"+SUP+"','"+PUR+"','"+WAR+"','"+WARS+"','"+WARE+"')" ;
+            String sql = "INSERT INTO f3 (`Item`, `SN`, `Configuration`, `Department`, `Supplier`, `Purchase`,`Price`, `Warrenty`, `Start`, `End`) VALUES ('"+ITEM+"','"+NO+"','"+CONF+"','"+DEPT+"','"+SUP+"','"+PUR+"','"+PRC+"','"+WAR+"','"+WARS+"','"+WARE+"')" ;
             
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Data Uploaded");
@@ -380,11 +412,14 @@ public class add3 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
             item.setText("");
             no.setText("");
             conf.setText("");
             dept.setText("");
             sup.setText("");
+            price.setText("");
+            
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton3KeyPressed
@@ -442,6 +477,14 @@ public class add3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_YesActionPerformed
 
+    private void priceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_priceMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priceMouseClicked
+
+    private void priceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priceActionPerformed
+
        
         
     /**
@@ -490,6 +533,7 @@ public class add3 extends javax.swing.JFrame {
     private javax.swing.JLabel B1;
     private javax.swing.JLabel B10;
     private javax.swing.JLabel B12;
+    private javax.swing.JLabel B13;
     private javax.swing.JLabel B2;
     private javax.swing.JLabel B3;
     private javax.swing.JLabel B4;
@@ -506,6 +550,7 @@ public class add3 extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField no;
+    private javax.swing.JTextField price;
     private com.toedter.calendar.JDateChooser pur;
     private javax.swing.JTextField sup;
     private com.toedter.calendar.JDateChooser ware;

@@ -287,7 +287,7 @@ public final class list3 extends javax.swing.JFrame {
         DateTimeFormatter cd = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedDate = date.format(cd);
 
-        String todate = model.getValueAt(index, 8).toString();
+        String todate = model.getValueAt(index, 9).toString();
 
         LocalDate fday=LocalDate.parse(formattedDate);
         LocalDate tday=LocalDate.parse(todate);
@@ -302,7 +302,7 @@ public final class list3 extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
         
-            String sql="SELECT SN, Item, Configuration, Department, Supplier, Purchase, Warrenty, Start, End FROM f3 WHERE SN LIKE '%"+src.getText()+"%'";
+            String sql="SELECT SN, Item, Configuration, Department, Supplier, Purchase, Price, Warrenty, Start, End FROM f3 WHERE SN LIKE '%"+src.getText()+"%'";
             
             stmt = conn.createStatement();
             ResultSet res = stmt.executeQuery(sql);

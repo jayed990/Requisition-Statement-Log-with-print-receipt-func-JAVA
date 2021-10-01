@@ -181,6 +181,7 @@ public final class add extends javax.swing.JFrame {
 
         dept.setEditable(true);
         dept.setMaximumRowCount(15);
+        dept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "____________________________________________" }));
         dept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deptActionPerformed(evt);
@@ -193,6 +194,8 @@ public final class add extends javax.swing.JFrame {
 
         brand.setEditable(true);
         brand.setMaximumRowCount(15);
+        brand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "____________________________________________" }));
+        brand.setToolTipText("");
         brand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brandActionPerformed(evt);
@@ -203,8 +206,8 @@ public final class add extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(52, 99, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(94, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -216,15 +219,7 @@ public final class add extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(B10)
                             .addComponent(B9)
-                            .addComponent(B11))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(price)
-                                .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(B11)
                             .addComponent(B7)
                             .addComponent(B3)
                             .addComponent(B2)
@@ -238,14 +233,17 @@ public final class add extends javax.swing.JFrame {
                             .addComponent(model)
                             .addComponent(user)
                             .addComponent(dept, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(brand, 0, 284, Short.MAX_VALUE)
+                            .addComponent(brand, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(no)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
                                 .addComponent(B8)
                                 .addGap(18, 18, 18)
-                                .addComponent(unit)))))
+                                .addComponent(unit))
+                            .addComponent(remark, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(price)
+                            .addComponent(usage))))
                 .addGap(119, 119, 119))
         );
         jPanel2Layout.setVerticalGroup(

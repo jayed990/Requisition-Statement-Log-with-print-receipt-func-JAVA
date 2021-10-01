@@ -68,8 +68,6 @@ public class print extends javax.swing.JFrame {
         date = new javax.swing.JTextField();
         x9 = new javax.swing.JTextField();
         x4 = new javax.swing.JTextField();
-        itb = new javax.swing.JTextField();
-        ito = new javax.swing.JTextField();
         brand7 = new javax.swing.JTextField();
         brand9 = new javax.swing.JTextField();
         brand8 = new javax.swing.JTextField();
@@ -88,6 +86,10 @@ public class print extends javax.swing.JFrame {
         remark1 = new javax.swing.JTextField();
         price1 = new javax.swing.JTextField();
         usage1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        itb = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        ito = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         search = new javax.swing.JButton();
         print = new javax.swing.JButton();
@@ -111,7 +113,8 @@ public class print extends javax.swing.JFrame {
         x5.setEditable(false);
         x5.setBackground(new java.awt.Color(255, 255, 255));
         x5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        x5.setText("   1");
+        x5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        x5.setText("1");
         x5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +122,7 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
+        brand.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
         brand.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         brand.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand.addActionListener(new java.awt.event.ActionListener() {
@@ -131,13 +134,13 @@ public class print extends javax.swing.JFrame {
         b7.setBackground(new java.awt.Color(255, 255, 255));
         b7.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b7.setText("Item 品牌");
+        b7.setText("Item 物品名称");
         b7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b8.setBackground(new java.awt.Color(255, 255, 255));
         b8.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b8.setText("Model 型号");
+        b8.setText("Model 物品型号");
         b8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         model.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
@@ -152,7 +155,7 @@ public class print extends javax.swing.JFrame {
         b9.setBackground(new java.awt.Color(255, 255, 255));
         b9.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b9.setText("Qty 数量");
+        b9.setText("Quantity 数量");
         b9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         qty.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
@@ -167,11 +170,11 @@ public class print extends javax.swing.JFrame {
         b10.setBackground(new java.awt.Color(255, 255, 255));
         b10.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b10.setText("Unit 单元");
+        b10.setText("Unit 单位");
         b10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        x66.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        x66.setText(" OM:");
+        x66.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        x66.setText(" OM 指挥官 :");
         x66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x66.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         x66.addActionListener(new java.awt.event.ActionListener() {
@@ -180,8 +183,8 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        brand2.setText(" PM:");
+        brand2.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        brand2.setText(" PM 经理 :");
         brand2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,8 +192,8 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        brand3.setText(" PAC:");
+        brand3.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        brand3.setText(" PAC 企划 :");
         brand3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,8 +201,8 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        brand4.setText(" IT:");
+        brand4.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
+        brand4.setText(" IT :");
         brand4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,8 +210,8 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        x98.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        x98.setText(" IT comment(Bengali):");
+        x98.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        x98.setText(" IT comment(Bengali) IT(孟干)说明 :");
         x98.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x98.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,8 +221,8 @@ public class print extends javax.swing.JFrame {
 
         x99.setEditable(false);
         x99.setBackground(new java.awt.Color(255, 255, 255));
-        x99.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        x99.setText(" IT comment(Overseas):");
+        x99.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        x99.setText(" IT comment(Overseas) IT(海外干部)说明 :");
         x99.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x99.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,14 +251,14 @@ public class print extends javax.swing.JFrame {
         b11.setBackground(new java.awt.Color(255, 255, 255));
         b11.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b11.setText("Remarks 备注");
+        b11.setText("Remarks 原因备注");
         b11.setToolTipText("");
         b11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         b12.setBackground(new java.awt.Color(255, 255, 255));
         b12.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b12.setText("Price 价钱");
+        b12.setText("Price 价格");
         b12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         price.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
@@ -279,7 +282,7 @@ public class print extends javax.swing.JFrame {
         b13.setBackground(new java.awt.Color(255, 255, 255));
         b13.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         b13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        b13.setText(" Duration of usage");
+        b13.setText("Usage 使用年限");
         b13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         dept.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -304,7 +307,7 @@ public class print extends javax.swing.JFrame {
         x3.setBackground(new java.awt.Color(255, 255, 255));
         x3.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x3.setText("Device No:");
+        x3.setText("Device No 财编:");
         x3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,7 +340,7 @@ public class print extends javax.swing.JFrame {
         device2.setBackground(new java.awt.Color(255, 255, 255));
         device2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         device2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        device2.setText("User Name用户名:");
+        device2.setText("User Name 用户名:");
         device2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         device2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -367,7 +370,7 @@ public class print extends javax.swing.JFrame {
         device5.setBackground(new java.awt.Color(255, 255, 255));
         device5.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         device5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        device5.setText("Date:");
+        device5.setText("Date 日期:");
         device5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         device5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -400,7 +403,7 @@ public class print extends javax.swing.JFrame {
         x9.setBackground(new java.awt.Color(255, 255, 255));
         x9.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         x9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x9.setText("Bangladesh Pou Hung(孟加拉国蒲洪)");
+        x9.setText("Bangladesh Pou Hung (孟加拉国宝弘)");
         x9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -412,7 +415,7 @@ public class print extends javax.swing.JFrame {
         x4.setBackground(new java.awt.Color(255, 255, 255));
         x4.setFont(new java.awt.Font("Microsoft JhengHei", 1, 14)); // NOI18N
         x4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        x4.setText("Department 部:");
+        x4.setText("Department 部门:");
         x4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         x4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -420,28 +423,8 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        itb.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        itb.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        itb.setText("  ");
-        itb.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        itb.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itbActionPerformed(evt);
-            }
-        });
-
-        ito.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
-        ito.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ito.setText("  ");
-        ito.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ito.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itoActionPerformed(evt);
-            }
-        });
-
-        brand7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        brand7.setText(" Department Manager:");
+        brand7.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        brand7.setText(" Department Manager 部门主管:");
         brand7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -449,8 +432,8 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        brand9.setText(" Applicant:");
+        brand9.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        brand9.setText(" Applicant 申请人:");
         brand9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -458,9 +441,9 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        brand8.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
         brand8.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        brand8.setText(" Department Leader:");
+        brand8.setText("Department Leader 单位主管:");
         brand8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -551,7 +534,7 @@ public class print extends javax.swing.JFrame {
             }
         });
 
-        brand1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
+        brand1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
         brand1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         brand1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         brand1.addActionListener(new java.awt.event.ActionListener() {
@@ -614,6 +597,26 @@ public class print extends javax.swing.JFrame {
             }
         });
 
+        itb.setColumns(5);
+        itb.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
+        itb.setLineWrap(true);
+        itb.setRows(4);
+        itb.setToolTipText("");
+        itb.setWrapStyleWord(true);
+        itb.setBorder(new javax.swing.border.MatteBorder(null));
+        itb.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jScrollPane1.setViewportView(itb);
+
+        ito.setColumns(5);
+        ito.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
+        ito.setLineWrap(true);
+        ito.setRows(4);
+        ito.setToolTipText("");
+        ito.setWrapStyleWord(true);
+        ito.setBorder(new javax.swing.border.MatteBorder(null));
+        ito.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jScrollPane2.setViewportView(ito);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -632,23 +635,23 @@ public class print extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(x6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(device2))
+                .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(user)
-                    .addComponent(x3))
+                    .addComponent(x3, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(user))
                 .addGap(0, 0, 0)
-                .addComponent(device5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(device5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(x7, javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(x9, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(x98, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
-                    .addComponent(itb))
-                .addGap(0, 0, 0)
+                    .addComponent(x98, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(x99)
-                    .addComponent(ito)))
+                    .addComponent(jScrollPane2)))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(x66)
@@ -679,52 +682,49 @@ public class print extends javax.swing.JFrame {
                     .addComponent(brand9)
                     .addComponent(ito7)))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(x5, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(b6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(x5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                    .addComponent(x10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(x10, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(b7, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                        .addComponent(brand))
-                    .addComponent(brand1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(b8, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                    .addComponent(model)
+                    .addComponent(b7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(brand)
+                    .addComponent(brand1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(0, 0, 0)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(model, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(b8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
                     .addComponent(model1))
+                .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(qty1)
                     .addComponent(qty)
-                    .addComponent(b9, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(unit1)
+                    .addComponent(b9, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(qty1))
+                .addGap(0, 0, 0)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(b10, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                     .addComponent(unit)
-                    .addComponent(b10, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE))
+                    .addComponent(unit1))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(remark, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, 0)
-                            .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, 0)
-                            .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                            .addComponent(b11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(0, 0, 0)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(b12, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                                    .addGap(0, 0, 0)
-                                    .addComponent(b13, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
-                                .addComponent(device))))
+                    .addComponent(device, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(remark1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(remark1)
+                            .addComponent(remark)
+                            .addComponent(b11, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))
                         .addGap(0, 0, 0)
-                        .addComponent(price1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(price1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(b12, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, 0)
-                        .addComponent(usage1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(usage1)
+                            .addComponent(b13, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usage)))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -773,12 +773,12 @@ public class print extends javax.swing.JFrame {
                     .addComponent(brand1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(x10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(usage1, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                        .addComponent(price1)
-                        .addComponent(remark1)
+                        .addComponent(usage1)
+                        .addComponent(remark1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(qty1, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(model1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(unit1)))
+                        .addComponent(unit1)
+                        .addComponent(price1)))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(brand3, javax.swing.GroupLayout.Alignment.LEADING)
@@ -795,11 +795,10 @@ public class print extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(x99)
                     .addComponent(x98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ito, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                    .addComponent(itb))
-                .addGap(0, 0, 0)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(brand8, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(brand7, javax.swing.GroupLayout.Alignment.LEADING)
@@ -833,7 +832,7 @@ public class print extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(51, 0, 153));
 
         search.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/src.png"))); // NOI18N
@@ -891,12 +890,12 @@ public class print extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(no, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                .addComponent(no)
                 .addGap(18, 18, 18)
                 .addComponent(search)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(search1)
-                .addGap(105, 105, 105)
+                .addGap(101, 101, 101)
                 .addComponent(print, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(121, 121, 121)
                 .addComponent(back1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -930,7 +929,7 @@ public class print extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(ppanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -942,7 +941,7 @@ public class print extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(1177, 747));
+        setSize(new java.awt.Dimension(1177, 742));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1114,14 +1113,6 @@ public class print extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_x4ActionPerformed
 
-    private void itbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itbActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itbActionPerformed
-
-    private void itoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itoActionPerformed
-
     private void ito1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ito1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ito1ActionPerformed
@@ -1219,9 +1210,6 @@ public class print extends javax.swing.JFrame {
 
     private void printKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_printKeyPressed
         // TODO add your handling code here:
-        if (evt.getKeyCode()==KeyEvent.VK_ENTER){
-            printRecord(ppanel);
-        }
     }//GEN-LAST:event_printKeyPressed
 
     /**
@@ -1285,8 +1273,8 @@ public class print extends javax.swing.JFrame {
     private javax.swing.JTextField device1;
     private javax.swing.JTextField device2;
     private javax.swing.JTextField device5;
-    private javax.swing.JTextField itb;
-    private javax.swing.JTextField ito;
+    private javax.swing.JTextArea itb;
+    private javax.swing.JTextArea ito;
     private javax.swing.JTextField ito1;
     private javax.swing.JTextField ito2;
     private javax.swing.JTextField ito3;
@@ -1296,6 +1284,8 @@ public class print extends javax.swing.JFrame {
     private javax.swing.JTextField ito7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField model;
     private javax.swing.JTextField model1;
     private javax.swing.JTextField no;
