@@ -340,7 +340,7 @@ public class edit extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(600, 695));
+        setSize(new java.awt.Dimension(608, 695));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

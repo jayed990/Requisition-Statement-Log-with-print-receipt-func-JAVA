@@ -191,7 +191,7 @@ public class home2 extends javax.swing.JFrame {
     private void PrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        print2 object = new print2();
+        print22 object = new print22();
         object.setVisible(true);
     }//GEN-LAST:event_PrintActionPerformed
 

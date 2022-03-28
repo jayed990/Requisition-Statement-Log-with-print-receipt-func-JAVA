@@ -298,7 +298,7 @@ public final class list2 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        print2 object = new print2();
+        print22 object = new print22();
         object.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
